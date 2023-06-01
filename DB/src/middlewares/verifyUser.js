@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken")
 const { PASSWORD_SIGN } = require("../config/enviroments")
 
-//middleware - extraccion de token
+//Middleware - Verify token 
 module.exports = (req, res, next) => {
     const authorization = req.get('Authorization')
     let token = ''

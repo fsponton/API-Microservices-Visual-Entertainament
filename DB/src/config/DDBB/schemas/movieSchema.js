@@ -1,6 +1,6 @@
 const { Schema } = require("mongoose")
 const genresSchema = require("./miniSchemas")
-
+const mongoose = require("mongoose")
 
 const movieSchema = Schema({
     _id: String,
@@ -9,8 +9,8 @@ const movieSchema = Schema({
     popularity: String,
     likes: { type: Number, default: 0 },
     language: { type: String, required: true },
-    actors: [{ type: Array, ref: "Actor" }],
-    director: [{ type: Array, ref: "Director" }],
+    actors: { type: Array, ref: "Actor" },
+    director: { type: String, ref: "Director" },
     genres: genresSchema
 })
 

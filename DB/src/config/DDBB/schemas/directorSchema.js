@@ -2,7 +2,7 @@ const { Schema } = require("mongoose")
 const genderSchema = require("./miniSchemas")
 
 const directorSchema = Schema({
-    id: String,
+    _id: String,
     name: String,
     birth_year: String,
     directed_movies: [{ type: Array, ref: "Movie" }],

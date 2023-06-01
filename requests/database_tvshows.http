@@ -1,0 +1,21 @@
+### insert new Movie
+POST http://localhost:8000/TvShow
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDIyOTcsImV4cCI6MTY4NTY0NTg5N30.34v1KmaK90d1yakF_xB9N5KMOz3xhCoFF6fW4rY0R3g
+
+{
+   "title": "Comiendo con Mirta", 
+   "release": "2000",
+   "language":"Eng",
+   "genres":["Comedy"]
+}
+
+
+
+### get films
+GET http://localhost:8000/Movie
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDIyOTcsImV4cCI6MTY4NTY0NTg5N30.34v1KmaK90d1yakF_xB9N5KMOz3xhCoFF6fW4rY0R3g
+
+
+

@@ -1,19 +1,16 @@
 ### insert new actor
 POST http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRlQGdtYWlsLmNvbSIsImlhdCI6MTY4NTU2NDM1NSwiZXhwIjoxNjg1NTY3OTU1fQ.Npey8s9Y9ZFLXMg63sYw3q6RIJdrvo4F5ZS6qwU1MyI
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDY0NDgsImV4cCI6MTY4NTY1MDA0OH0.czivWl3tHZF1QEmSCFphwCP0OSaG7ZGZ_QPY5fSEUd8
 
 {
-    "name":"brad pitt",
+    "name":"brad pittttttt",
     "role":"princpal",
-    "movies":[
-        {"title":"figth club"},
-        {"title":"troya", "release":"2019"}]
+    "movies":"6478e4bc07db0abdf29bc8da"
+   
 }
 
 ### Get list Actors
 GET http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRlQGdtYWlsLmNvbSIsImlhdCI6MTY4NTU2NDM1NSwiZXhwIjoxNjg1NTY3OTU1fQ.Npey8s9Y9ZFLXMg63sYw3q6RIJdrvo4F5ZS6qwU1MyI
-
-
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDc5OTksImV4cCI6MTY4NTY1MTU5OX0.VzJFoLWoNtixbeEbULLCvspHxUZm4BKfSIk7zSNOE-Y

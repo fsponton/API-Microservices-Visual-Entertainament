@@ -2,27 +2,28 @@ const { Schema } = require("mongoose")
 const genresSchema = require("./miniSchemas")
 
 const tvShowSchema = Schema({
-    id: String,
+    _id: String,
     title: { type: String, required: true },
     release: { type: String, required: true },
-    popularity: String,
+    popularity: Number,
+    seasons: Number,
     likes: { type: Number, default: 0 },
     language: { type: String, required: true },
-    actors: [{ type: Array, ref: "Actor" }],
-    director: [{ type: Array, ref: "Director" }],
-    genres: { type: genresSchema, required: true }
+    actors: { type: Array, ref: "Actor" },
+    director: { type: String, ref: "Director" },
+    genres: genresSchema
 })
 
 tvShowSchema.statics.list = async function () {
     return await this.find()
-        .populate("Actor", ["name"])
-        .populate("Director", ["name"])
+        .populate("actors", ["name"])
+        .populate("director", ["name"])
 }
 
 tvShowSchema.statics.getById = async function () {
     return await this.find(id)
-        .populate("Actor", ["name"])
-        .populate("Director", ["name"])
+        .populate("actors", ["name"])
+        .populate("director", ["name"])
 }
 
 tvShowSchema.statics.insert = async function (show) {

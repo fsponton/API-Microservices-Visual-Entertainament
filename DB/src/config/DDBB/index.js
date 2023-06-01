@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const { URI_CONNECTION } = require("../enviroments")
 
-const connection = mongoose.createConnection(URI_CONNECTION)
+const connection = mongoose.createConnection((URI_CONNECTION), { useNewUrlParser: true, useUnifiedTopology: true })
 
 module.exports = {
     Actor: connection.model("Actor", require("./schemas/actorSchema")),

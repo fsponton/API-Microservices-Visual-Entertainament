@@ -1,13 +1,14 @@
 ### insert new Movie
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRlQGdtYWlsLmNvbSIsImlhdCI6MTY4NTU2NDY5NywiZXhwIjoxNjg1NTY4Mjk3fQ.sK1JfhoNFTItMGStHH-TPGqu4EuZQOZnD6UCYGn9VVg
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDQzNDIsImV4cCI6MTY4NTY0Nzk0Mn0.eSwLPAPeBwGcTGbFrF2Fb-XjM0rYSJFEnRdCjBRG108
 
 {
-    "title":"jumanji 3",
-    "release":"2000",
-    "language":"Spanish",
-    "genres":["Comedy","Drama"]
+    "title":"figth club",
+    "release":"2019",
+    "language":"Eng",
+    "genres":["Thriller","Suspence"], 
+    "actors": "6478efc01a9de92edc4e2896"
 }
 
 
@@ -15,7 +16,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRlQ
 ### get films
 GET http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYiLCJlbWFpbCI6ImV6ZUBnbWFpbC5jb20iLCJpYXQiOjE2ODU1NDUxMzgsImV4cCI6MTY4NTU0ODczOH0.vv82BFluArej_5yy17kmM1aCO19yRetdUubeDgQQYvo
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDQzNDIsImV4cCI6MTY4NTY0Nzk0Mn0.eSwLPAPeBwGcTGbFrF2Fb-XjM0rYSJFEnRdCjBRG108
 
 
 
