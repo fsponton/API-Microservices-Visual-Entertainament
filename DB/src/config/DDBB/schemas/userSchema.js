@@ -1,7 +1,6 @@
 const { Schema } = require("mongoose")
 const genderSchema = require("./miniSchemas")
 
-
 const userSchema = Schema({
     id: String,
     name: String,

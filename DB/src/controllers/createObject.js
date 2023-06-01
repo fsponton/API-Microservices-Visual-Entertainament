@@ -6,9 +6,7 @@ module.exports = async (req, res) => {
     const { model } = req.params
     const form = req.body
     const _id = new mongoose.Types.ObjectId;
-
-    // const list = await store[model].find()
-    // const _id = (list.length) + 1
+    console.log(_id)
     const result = await store[model].insert({ ...form, _id })
     response(res, 201, result)
 }

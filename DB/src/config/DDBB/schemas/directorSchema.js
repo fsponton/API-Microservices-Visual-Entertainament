@@ -1,5 +1,4 @@
 const { Schema } = require("mongoose")
-const genderSchema = require("./miniSchemas")
 
 const directorSchema = Schema({
     _id: String,

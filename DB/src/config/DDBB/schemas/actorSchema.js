@@ -1,6 +1,6 @@
 const { Schema } = require("mongoose")
 const genderSchema = require("./miniSchemas")
-const mongoose = require("mongoose")
+
 const actorSchema = Schema({
     _id: String,
     name: String,
