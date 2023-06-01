@@ -1,0 +1,19 @@
+### insert new actor
+POST http://localhost:8000/Actor
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRlQGdtYWlsLmNvbSIsImlhdCI6MTY4NTU2NDM1NSwiZXhwIjoxNjg1NTY3OTU1fQ.Npey8s9Y9ZFLXMg63sYw3q6RIJdrvo4F5ZS6qwU1MyI
+
+{
+    "name":"brad pitt",
+    "role":"princpal",
+    "movies":[
+        {"title":"figth club"},
+        {"title":"troya", "release":"2019"}]
+}
+
+### Get list Actors
+GET http://localhost:8000/Actor
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRlQGdtYWlsLmNvbSIsImlhdCI6MTY4NTU2NDM1NSwiZXhwIjoxNjg1NTY3OTU1fQ.Npey8s9Y9ZFLXMg63sYw3q6RIJdrvo4F5ZS6qwU1MyI
+
+

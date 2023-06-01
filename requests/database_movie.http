@@ -1,0 +1,21 @@
+### insert new Movie
+POST http://localhost:8000/Movie
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRlQGdtYWlsLmNvbSIsImlhdCI6MTY4NTU2NDY5NywiZXhwIjoxNjg1NTY4Mjk3fQ.sK1JfhoNFTItMGStHH-TPGqu4EuZQOZnD6UCYGn9VVg
+
+{
+    "title":"jumanji 3",
+    "release":"2000",
+    "language":"Spanish",
+    "genres":["Comedy","Drama"]
+}
+
+
+
+### get films
+GET http://localhost:8000/Movie
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYiLCJlbWFpbCI6ImV6ZUBnbWFpbC5jb20iLCJpYXQiOjE2ODU1NDUxMzgsImV4cCI6MTY4NTU0ODczOH0.vv82BFluArej_5yy17kmM1aCO19yRetdUubeDgQQYvo
+
+
+
