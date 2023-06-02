@@ -2,8 +2,15 @@ const { Schema } = require("mongoose")
 
 const directorSchema = Schema({
     _id: String,
-    name: String,
-    birth_year: String,
+    name: {
+        type: String,
+        required: true,
+        lowercase: true,
+    },
+    birth_year: {
+        type: String,
+        required: true,
+    },
     directed_movies: [{ type: Array, ref: "Movie" }],
     directed_tvshows: [{ type: Array, ref: "TvShow" }]
 })

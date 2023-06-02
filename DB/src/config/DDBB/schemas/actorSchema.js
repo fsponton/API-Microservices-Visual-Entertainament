@@ -1,13 +1,23 @@
 const { Schema } = require("mongoose")
-const genderSchema = require("./miniSchemas")
+
 
 const actorSchema = Schema({
     _id: String,
-    name: String,
-    role: String,
-    movies: { type: Array, ref: "Movie" },
-    tvshows: { type: Array, ref: "TvShow" },
-    gender: genderSchema
+    name: {
+        type: String,
+        required: true,
+        lowercase: true,
+    },
+    gender: {
+        type: String,
+        enum: ['Female', 'Male', 'N/A']
+    },
+    birth_year: {
+        type: String,
+        required: true,
+    },
+    id_movies_protagonized: [{ type: String, ref: "Movie" }],
+    id_tvshows_protagonized: [{ type: String, ref: "TvShow" }]
 })
 
 actorSchema.statics.list = async function () {

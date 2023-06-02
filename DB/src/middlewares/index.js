@@ -1,5 +1,7 @@
 module.exports = {
     verifyUser: require("./verifyUser"),
     verifyLogin: require("./verifyLogin"),
-    verifyExistence: require("./verifyExistence")
+    verifyExistenceUser: require("./verifyExistenceUser"),
+    verifyExistence: require("./verifyExistence"),
+    validateModel: require("./validateModel")
 }

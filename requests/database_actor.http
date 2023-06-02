@@ -1,16 +1,15 @@
 ### insert new actor
 POST http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDY0NDgsImV4cCI6MTY4NTY1MDA0OH0.czivWl3tHZF1QEmSCFphwCP0OSaG7ZGZ_QPY5fSEUd8
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoie2ZzdHR0ZGRzfSIsImVtYWlsIjoiZnJhbmNpc2NvLnNwb250b25AZ21haWwuY29tIiwiaWF0IjoxNjg1NzMxNTg1LCJleHAiOjE2ODU3MzUxODV9.RcamQiPn6UgeLH8-p8kJKBNVOzxkEB3xUfQx05qjmw8
 
 {
-    "name":"brad pittttttt",
-    "role":"princpal",
-    "movies":"6478e4bc07db0abdf29bc8da"
-   
+    "name":"brad pitt4aaasssssssaaaaaaaaaaaaaaaas",
+    "gender":"Male",
+    "birth_year":"03091988" 
 }
 
 ### Get list Actors
 GET http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDc5OTksImV4cCI6MTY4NTY1MTU5OX0.VzJFoLWoNtixbeEbULLCvspHxUZm4BKfSIk7zSNOE-Y
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NTkzMzYsImV4cCI6MTY4NTY2MjkzNn0.lyA9l4fyq_d5ZU003Hg-XQ1OYIK_JU1aYbHUk5L81JI
