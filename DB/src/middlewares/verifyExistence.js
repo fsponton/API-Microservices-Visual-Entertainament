@@ -1,20 +1,18 @@
+const store = require("../config/DDBB/index")
+const checkAndModifyName = require("../utils/checkAndModifyName")
 
-const { User } = require("../config/DDBB/index")
 
-
-//Middlware - Existence User
+//Middlware - Check existence an object in model
 module.exports = async (req, res, next) => {
-    const { email, password } = req.body
-    const emailLower = email.toLowerCase().trim()
+    const { model } = req.params
 
-    const user = await User.findOne({ email: emailLower })
+    const result = checkAndModifyName(req.body)
 
-    if (user) return res.status(401).send({ status: "error", msg: `User with ${email} already exist's` });
+    const object = await store[model].findOne({ name: result.name })
 
-    req.form = {
-        email: emailLower,
-        password
-    }
+    if (object) return res.status(404).send({ status: "error", msg: `${model} with ${result.nameOrTitle}: ${result.name} already exist's` });
+
+    req.body.name = result.name
 
     next()
 }

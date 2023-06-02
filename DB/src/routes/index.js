@@ -4,18 +4,31 @@ const middleware = require("../middlewares")
 const controller = require("../controllers")
 
 //POST register user.
-router.post("/User/register", middleware.verifyExistence, controller.registerUser)
+router.post("/:model/register",
+    middleware.validateModel,
+    middleware.verifyExistenceUser,
+    controller.registerUser)
 
 //POST login, return token on header.
-router.post("/User/login", middleware.verifyLogin, controller.login)
-
+router.post("/:model/login",
+    middleware.validateModel,
+    middleware.verifyLogin,
+    controller.login)
 
 //POST Create, polimorfic, for any entity.
-router.post("/:model", middleware.verifyUser, controller.createObject)
+router.post("/:model",
+    middleware.validateModel,
+    middleware.verifyUser,
+    middleware.verifyExistence,
+    controller.createObject)
 
 
 //GET LIST, polimorfic, for any entity.
-router.get("/:model", middleware.verifyUser, controller.getList)
+router.get("/:model",
+    middleware.validateModel,
+    middleware.verifyUser,
+    controller.getList)
+
 
 module.exports = router;
 

@@ -1,7 +1,7 @@
 ### insert new Movie
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDQzNDIsImV4cCI6MTY4NTY0Nzk0Mn0.eSwLPAPeBwGcTGbFrF2Fb-XjM0rYSJFEnRdCjBRG108
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDc5OTksImV4cCI6MTY4NTY1MTU5OX0.VzJFoLWoNtixbeEbULLCvspHxUZm4BKfSIk7zSNOE-Y
 
 {
     "title":"figth club",
@@ -16,7 +16,6 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5ze
 ### get films
 GET http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDQzNDIsImV4cCI6MTY4NTY0Nzk0Mn0.eSwLPAPeBwGcTGbFrF2Fb-XjM0rYSJFEnRdCjBRG108
-
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NTg5NzgsImV4cCI6MTY4NTY2MjU3OH0.MjB3T2O4MMvLfMsdwAOlsvWxn5cD4BRY1HBDtvInWAY
 
 

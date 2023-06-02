@@ -1,18 +1,34 @@
 const { Schema } = require("mongoose")
-const genderSchema = require("./miniSchemas")
 
 const userSchema = Schema({
-    id: String,
-    name: String,
-    email: String,
-    password: String,
-    birth_year: String,
+    _id: String,
+    name: {
+        type: String,
+        required: true,
+        lowercase: true,
+    },
+    email: {
+        type: String,
+        required: true,
+        lowercase: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+    gender: {
+        type: String,
+        enum: ['Female', 'Male', 'N/A']
+    },
+    accountCreated: {
+        type: Date,
+        default: Date.now
+    },
     resetToken: String,
-    actors_favorites: [{ type: String, ref: "Actor" }],
-    movies_favorites: [{ type: String, ref: "Movie" }],
-    tvshows_favorites: [{ type: String, ref: "TvShow" }],
-    directors_favorites: [{ type: String, ref: "Director" }],
-    gender: genderSchema
+    id_actors_favorites: [{ type: String, ref: "Actor" }],
+    id_movies_favorites: [{ type: String, ref: "Movie" }],
+    id_tvshows_favorites: [{ type: String, ref: "TvShow" }],
+    id_directors_favorites: [{ type: String, ref: "Director" }]
 })
 
 userSchema.statics.list = async function () {

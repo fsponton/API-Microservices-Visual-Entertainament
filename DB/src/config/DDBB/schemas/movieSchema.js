@@ -1,16 +1,27 @@
 const { Schema } = require("mongoose")
-const genresSchema = require("./miniSchemas")
+
 
 const movieSchema = Schema({
     _id: String,
-    title: { type: String, required: true },
+    title: {
+        type: String,
+        required: true,
+        lowercase: true,
+    },
     release: { type: String, required: true },
-    popularity: String,
+    popularity: { type: Number, default: 0 },
     likes: { type: Number, default: 0 },
-    language: { type: String, required: true },
-    actors: { type: Array, ref: "Actor" },
-    director: { type: String, ref: "Director" },
-    genres: genresSchema
+    language: [{
+        type: String,
+        required: true,
+        lowercase: true,
+    }],
+    id_actors: [{ type: String, ref: "Actor" }],
+    id_director: { type: String, ref: "Director" },
+    genres: [{
+        type: String,
+        enum: ['Comedy', 'Drama', 'Crime', 'Action', 'Sci-Fi', 'Horror', 'Thriller', 'Adventure', 'Romance', 'Mistery', 'Fantasy']
+    }]
 })
 
 movieSchema.statics.list = async function () {
