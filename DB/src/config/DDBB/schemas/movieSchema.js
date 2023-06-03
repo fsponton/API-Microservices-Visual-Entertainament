@@ -1,6 +1,5 @@
 const { Schema } = require("mongoose")
 
-
 const movieSchema = Schema({
     _id: String,
     title: {
