@@ -1,15 +1,27 @@
-### insert new actor
+### Create new actor
 POST http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoie2ZzdHR0ZGRzfSIsImVtYWlsIjoiZnJhbmNpc2NvLnNwb250b25AZ21haWwuY29tIiwiaWF0IjoxNjg1NzMxNTg1LCJleHAiOjE2ODU3MzUxODV9.RcamQiPn6UgeLH8-p8kJKBNVOzxkEB3xUfQx05qjmw8
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzI5OTIsImV4cCI6MTY4NTk3NjU5Mn0.zBBAGXcMYVsVuhg-JNQSoGiXzMU3QqE1V7j2C2wOd3A
 
 {
-    "name":"brad pitt4aaasssssssaaaaaaaaaaaaaaaas",
+    "name":"copperfield",
     "gender":"Male",
     "birth_year":"03091988" 
 }
 
-### Get list Actors
+### Get list of Actors
 GET http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NTkzMzYsImV4cCI6MTY4NTY2MjkzNn0.lyA9l4fyq_d5ZU003Hg-XQ1OYIK_JU1aYbHUk5L81JI
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NjkyMjIsImV4cCI6MTY4NTk3MjgyMn0.39cb9GVKWmB0SZs2kAficvFQkkvhdANY7DJ1RZ2hz-g
+
+
+### Get Actor By Id
+GET http://localhost:8000/Actor?id=647a455dc8af203df091ef29
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NjkyMjIsImV4cCI6MTY4NTk3MjgyMn0.39cb9GVKWmB0SZs2kAficvFQkkvhdANY7DJ1RZ2hz-g
+
+
+### Sort by Name
+GET http://localhost:8000/Actor/sort?prop=name&shape=-1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzI5OTIsImV4cCI6MTY4NTk3NjU5Mn0.zBBAGXcMYVsVuhg-JNQSoGiXzMU3QqE1V7j2C2wOd3A

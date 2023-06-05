@@ -1,21 +1,30 @@
-### insert new Movie
+### Create a new Movie
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDc5OTksImV4cCI6MTY4NTY1MTU5OX0.VzJFoLWoNtixbeEbULLCvspHxUZm4BKfSIk7zSNOE-Y
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzM2NTEsImV4cCI6MTY4NTk3NzI1MX0.zO8HAR9CVHgHDkhldKV56R1bkX0EF0PMBL9FcjELKn8
 
 {
-    "title":"figth club",
-    "release":"2019",
+    "title":"yigth club",
+    "release":"2015",
     "language":"Eng",
-    "genres":["Thriller","Suspence"], 
-    "actors": "6478efc01a9de92edc4e2896"
+    "genres":["Thriller","Suspence"]
 }
 
 
 
-### get films
+### Get all movies
 GET http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NTg5NzgsImV4cCI6MTY4NTY2MjU3OH0.MjB3T2O4MMvLfMsdwAOlsvWxn5cD4BRY1HBDtvInWAY
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NjkyMjIsImV4cCI6MTY4NTk3MjgyMn0.39cb9GVKWmB0SZs2kAficvFQkkvhdANY7DJ1RZ2hz-g
 
 
+
+### Get Movie By Id
+GET http://localhost:8000/Movie/647ddd3688c76e45cc594e27
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzY4MDQsImV4cCI6MTY4NTk4MDQwNH0.zTQkobsK-wqdGe0eOKro1NoumDvaVEC88vlxqEojRgg
+
+### Sort by title
+GET http://localhost:8000/Movie/sort?prop=release&shape=-1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzM2NTEsImV4cCI6MTY4NTk3NzI1MX0.zO8HAR9CVHgHDkhldKV56R1bkX0EF0PMBL9FcjELKn8

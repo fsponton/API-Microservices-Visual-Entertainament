@@ -23,11 +23,24 @@ router.post("/:model",
     controller.createObject)
 
 
+
+// GET SORTED LIST, polimorfic, for any entity. 
+router.get("/:model/sort/",
+    middleware.validateModel,
+    middleware.verifyUser,
+    controller.orderByProp)
+
 //GET LIST, polimorfic, for any entity.
-router.get("/:model",
+router.get("/:model/",
     middleware.validateModel,
     middleware.verifyUser,
     controller.getList)
+
+//GET by id, polimorfic, for any entity.
+router.get("/:model/:id",
+    middleware.validateModel,
+    middleware.verifyUser,
+    controller.getById)
 
 
 module.exports = router;

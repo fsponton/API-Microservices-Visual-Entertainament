@@ -31,10 +31,14 @@ tvShowSchema.statics.list = async function () {
         .populate("director", ["name"])
 }
 
-tvShowSchema.statics.getById = async function () {
-    return await this.find(id)
-        .populate("actors", ["name"])
-        .populate("director", ["name"])
+tvShowSchema.statics.ById = async function (id) {
+    return await this.findById(id)
+        .populate("Actor", ["name"])
+        .populate("Director", ["name"])
+}
+
+tvShowSchema.statics.order = async function (attributes) {
+    return await this.find().sort(attributes)
 }
 
 tvShowSchema.statics.insert = async function (show) {

@@ -1,21 +1,31 @@
 ### insert new Movie
 POST http://localhost:8000/TvShow
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDIyOTcsImV4cCI6MTY4NTY0NTg5N30.34v1KmaK90d1yakF_xB9N5KMOz3xhCoFF6fW4rY0R3g
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzY0OTIsImV4cCI6MTY4NTk4MDA5Mn0.89-fE3-GdB_KPtLSCThlL9O61OfrDbuSSWJKUZWUybg
 
 {
-   "title": "Comiendo con Mirta", 
-   "release": "2000",
-   "language":"Eng",
-   "genres":["Comedy"]
+   "title": "show match", 
+   "release": "1990",
+   "language":"SPA",
+   "genres":["Comedy"],
+   "seasons": 10
 }
 
 
 
-### get films
-GET http://localhost:8000/Movie
+### Get all tvshows
+GET http://localhost:8000/TvShow
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZyYW5zeHBvbnRvbnNzc0BnbWFpbC5jb20iLCJpYXQiOjE2ODU2NDIyOTcsImV4cCI6MTY4NTY0NTg5N30.34v1KmaK90d1yakF_xB9N5KMOz3xhCoFF6fW4rY0R3g
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzY0OTIsImV4cCI6MTY4NTk4MDA5Mn0.89-fE3-GdB_KPtLSCThlL9O61OfrDbuSSWJKUZWUybg
+
+### Get tvshow by id
+GET http://localhost:8000/TvShow?id=647df5d82eea3635a8a5ab09
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzY0OTIsImV4cCI6MTY4NTk4MDA5Mn0.89-fE3-GdB_KPtLSCThlL9O61OfrDbuSSWJKUZWUybg
 
 
 
+### Sort by prop, asc or desc
+GET http://localhost:8000/TvShow/sort?prop=release&shape=1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzY0OTIsImV4cCI6MTY4NTk4MDA5Mn0.89-fE3-GdB_KPtLSCThlL9O61OfrDbuSSWJKUZWUybg

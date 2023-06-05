@@ -22,12 +22,11 @@ directorSchema.statics.list = async function () {
 }
 
 
-directorSchema.statics.getById = async function () {
-    return await this.find(id)
-        .populate("Movie", ["title", "release"])
-        .populate("TvShow", ["title", "realease"])
+directorSchema.statics.ById = async function (id) {
+    return await this.findById(id)
+        .populate("Actor", ["name"])
+        .populate("Director", ["name"])
 }
-
 
 directorSchema.statics.insert = async function (director) {
     return await this.create(director)

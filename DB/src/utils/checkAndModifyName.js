@@ -1,5 +1,12 @@
 module.exports = (req) => {
-    const arr = req.name.split(" ")
+    let arr = []
+    if (req.name) {
+        arr = req.name.split(" ")
+    } else {
+        console.log(req.title)
+        arr = req.title.split(" ")
+    }
+
 
     for (let i = 0; i < arr.length; i++) {
         arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);

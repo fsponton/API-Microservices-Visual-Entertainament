@@ -27,11 +27,16 @@ actorSchema.statics.list = async function () {
 }
 
 
-actorSchema.statics.getById = async function () {
-    return await this.find(id)
-        .populate("movies", ["title", "release"])
-        .populate("tvshows", ["title", "realease"])
+actorSchema.statics.ById = async function (id) {
+    return await this.findById(id)
+        .populate("Actor", ["name"])
+        .populate("Director", ["name"])
 }
+
+actorSchema.statics.order = async function (attributes) {
+    return await this.find().sort(attributes)
+}
+
 
 
 actorSchema.statics.insert = async function (actor) {

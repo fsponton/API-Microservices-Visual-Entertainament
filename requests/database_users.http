@@ -3,7 +3,7 @@ POST http://localhost:8000/User/register
 Content-Type: application/json
 
 {
-    "name":"{fsTTTdds}",
+    "name":"fsTTTdds",
     "email":"Francisco.sponton@gmail.com ",
     "password":"123456",
     "gender":"Male"
@@ -21,7 +21,6 @@ Content-Type: application/json
 
 
 ####
-
 GET  http://localhost:8000/User
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoie2ZzdHR0ZGRzfSIsImVtYWlsIjoiZnNzZHNhYWFhYWFhYWFhYWFhYWFzYWFhYWFhc3NhYWFzc3Nzc3Nzc3NhYWFzYWFhYWFhc2FhYWFhYXN0dHRAZ21haWwuY29tIiwiaWF0IjoxNjg1NzIxODA2LCJleHAiOjE2ODU3MjU0MDZ9._40n6diXKQydUK4Z_09JRWSUhHzHOX5O3MmCvJ0WWzw
