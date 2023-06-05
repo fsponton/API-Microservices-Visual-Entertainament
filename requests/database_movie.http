@@ -1,10 +1,10 @@
 ### Create a new Movie
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzM2NTEsImV4cCI6MTY4NTk3NzI1MX0.zO8HAR9CVHgHDkhldKV56R1bkX0EF0PMBL9FcjELKn8
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5OTU2NzMsImV4cCI6MTY4NTk5OTI3M30.8M2s_lnTdTrsNnk-oW_6YXQOA9dP3kox7hDYVLMN9ys
 
 {
-    "title":"yigth club",
+    "title":"titanic",
     "release":"2015",
     "language":"Eng",
     "genres":["Thriller","Suspence"]

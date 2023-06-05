@@ -22,15 +22,15 @@ const actorSchema = Schema({
 
 actorSchema.statics.list = async function () {
     return await this.find()
-        .populate("movies", ["title", "release"])
-        .populate("tvshows", ["title", "realease"])
+        .populate("id_movies_protagonized", ["id", "title", "release"])
+        .populate("id_tvshows_protagonized", ["id", "title", "realease"])
 }
 
 
 actorSchema.statics.ById = async function (id) {
     return await this.findById(id)
-        .populate("Actor", ["name"])
-        .populate("Director", ["name"])
+        .populate("id_movies_protagonized", ["id", "title", "release"])
+        .populate("id_tvshows_protagonized", ["id", "title", "realease"])
 }
 
 actorSchema.statics.order = async function (attributes) {

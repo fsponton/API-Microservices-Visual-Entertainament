@@ -11,21 +11,21 @@ const directorSchema = Schema({
         type: String,
         required: true,
     },
-    directed_movies: [{ type: Array, ref: "Movie" }],
-    directed_tvshows: [{ type: Array, ref: "TvShow" }]
+    id_movies_directed: [{ type: Array, ref: "Movie" }],
+    id_tvshows_directed: [{ type: Array, ref: "TvShow" }]
 })
 
 directorSchema.statics.list = async function () {
     return await this.find()
-        .populate("Movie", ["title", "release"])
-        .populate("TvShow", ["title", "realease"])
+        .populate("id_movies_directed", ["id", "title", "realease"])
+        .populate("id_tvshows_directed", ["id", "title", "realease"])
 }
 
 
 directorSchema.statics.ById = async function (id) {
     return await this.findById(id)
-        .populate("Actor", ["name"])
-        .populate("Director", ["name"])
+        .populate("id_movies_directed", ["id", "title", "realease"])
+        .populate("id_tvshows_directed", ["id", "title", "realease"])
 }
 
 directorSchema.statics.insert = async function (director) {
