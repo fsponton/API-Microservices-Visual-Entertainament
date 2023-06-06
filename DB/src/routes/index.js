@@ -24,7 +24,7 @@ router.post("/:model",
 
 
 
-// GET SORTED LIST, polimorfic, for any entity. 
+// GET SORTED LIST, polimorfic, for any entity.  /sort?prop=release&shape=-1
 router.get("/:model/sort/",
     middleware.validateModel,
     middleware.verifyUser,

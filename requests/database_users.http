@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
     "name":"fsTTTdds",
-    "email":"Francisco.sponton@gmail.com ",
+    "email":"F@gmail.com ",
     "password":"123456",
     "gender":"Male"
 }
@@ -15,7 +15,7 @@ POST http://localhost:8000/User/login
 Content-Type: application/json
 
 {
-    "email":"Francisco.sponton@gmail.com  ",
+    "email":" f@gmail.com  ",
     "password":"123456"
 }
 

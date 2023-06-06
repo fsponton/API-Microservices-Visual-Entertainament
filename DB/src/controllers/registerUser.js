@@ -1,7 +1,7 @@
-const { User } = require("../config/DDBB/index")
-const { response } = require("../utils")
-const bcrypt = require("bcryptjs")
 const mongoose = require("mongoose")
+const { User } = require("../config/DDBB/index")
+const bcrypt = require("bcryptjs")
+const { response } = require("../utils")
 
 
 module.exports = async (req, res) => {

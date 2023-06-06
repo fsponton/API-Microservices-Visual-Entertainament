@@ -1,6 +1,5 @@
 const store = require("../config/DDBB/index")
-const checkAndModifyName = require("../utils/checkAndModifyName")
-
+const { checkAndModifyName } = require("../helpers")
 
 //Middlware - Check existence an object in model
 module.exports = async (req, res, next) => {
@@ -8,11 +7,15 @@ module.exports = async (req, res, next) => {
 
     const result = checkAndModifyName(req.body)
 
-    const object = await store[model].findOne({ name: result.name })
-
-    if (object) return res.status(404).send({ status: "error", msg: `${model} with ${result.nameOrTitle}: ${result.name} already exist's` });
-
-    req.body.name = result.name
+    if (result.nameOrTitle === "title") {
+        const object = await store[model].findOne({ title: result.name })
+        if (object) return res.status(404).send({ status: "error", msg: `${model} with ${result.nameOrTitle}: ${result.value} already exist's` });
+        req.body.title = result.name
+    } else {
+        const object = await store[model].findOne({ name: result.name })
+        if (object) return res.status(404).send({ status: "error", msg: `${model} with ${result.nameOrTitle}: ${result.value} already exist's` });
+        req.body.name = result.name
+    }
 
     next()
 }

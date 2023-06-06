@@ -4,8 +4,7 @@ const { response } = require("../utils")
 module.exports = async (req, res) => {
     const { model } = req.params
     const { query } = req
-    const value = Object.values(query)
-
-    const result = await store[model].order([value])
+    const values = Object.values(query)
+    const result = await store[model].order([values])
     response(res, 200, result)
 }

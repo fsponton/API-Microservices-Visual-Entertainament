@@ -1,10 +1,10 @@
 const { ClientError } = require("../utils/errors")
+const { ENTITIES } = require("../config/enviroments")
 
 module.exports = (req, res, next) => {
     const { model } = req.params
-
-    if (!["Actor", "Movie", "TvShow", "Director", "User"].includes(model)) {
-        throw new ClientError(`No coincide la route, no contiene Actor || Movie || tvShow || Director || User`, 404)
+    if (!(ENTITIES.includes(model))) {
+        throw new ClientError(`Invalid route, please check`, 404)
     }
     next()
 }

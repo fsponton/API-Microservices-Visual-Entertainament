@@ -7,5 +7,4 @@ module.exports = {
     login: catchedAsync(require("./login")),
     registerUser: catchedAsync(require("./registerUser")),
     orderByProp: catchedAsync(require("./orderByProp"))
-    // updateMoviesOnActor: catchedAsync(require("./updateMoviesOnActor"))
 }

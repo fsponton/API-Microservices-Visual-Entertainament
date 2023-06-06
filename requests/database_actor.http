@@ -1,10 +1,10 @@
 ### Create new actor
 POST http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMDUzMTAsImV4cCI6MTY4NjAwODkxMH0.VMTE67PbxuKgN2X02rD9zH73J5e3fEouNl-LKk56PiQ
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMjEyNDYsImV4cCI6MTY4NjAyNDg0Nn0.h2cglQdaH_f827bJNyRWCw2xBNZupgu9AHF-C-6SsTg
 
 {
-    "name":"ssssssss",
+    "name":"tuki2",
     "gender":"Male",
     "birth_year":"03091988" 
 }
@@ -12,8 +12,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3Z
 ### Get list of Actors
 GET http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5OTU2NzMsImV4cCI6MTY4NTk5OTI3M30.8M2s_lnTdTrsNnk-oW_6YXQOA9dP3kox7hDYVLMN9ys
-
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMjEyNDYsImV4cCI6MTY4NjAyNDg0Nn0.h2cglQdaH_f827bJNyRWCw2xBNZupgu9AHF-C-6SsTg
 
 ### Get Actor By Id
 GET http://localhost:8000/Actor/647de9d62eea3635a8a5aafa
