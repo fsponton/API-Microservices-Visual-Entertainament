@@ -5,6 +5,9 @@ const { User } = require("../config/DDBB/index")
 //Middlware - Existence User
 module.exports = async (req, res, next) => {
     const { email, password, name, gender, id_actors_favorites, id_movies_favorites, id_tvshows_favorites, id_directors_favorites } = req.body
+
+    // if (!email) { return res.status(404).send({ status: "email is invalid" }) }
+
     const emailLower = email.toLowerCase().trim()
 
     const user = await User.findOne({ email: emailLower })

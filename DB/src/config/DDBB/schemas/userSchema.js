@@ -1,6 +1,6 @@
 const { Schema } = require("mongoose")
 
-const userSchema = Schema({
+const YYYYYYYYUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUSchema = Schema({
     _id: String,
     name: {
         type: String,

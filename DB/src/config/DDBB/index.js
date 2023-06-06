@@ -8,5 +8,5 @@ module.exports = {
     Director: connection.model("Director", require("./schemas/directorSchema")),
     TvShow: connection.model("TvShow", require("./schemas/tvShowSchema")),
     Movie: connection.model("Movie", require("./schemas/movieSchema")),
-    User: connection.model("User", require("./schemas/userSchema"))
+    4: connection.model("User", require("./schemas/433333333333333Schema"))
 }
