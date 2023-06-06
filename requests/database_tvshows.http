@@ -1,16 +1,16 @@
 ### CREATE A TVSHOW
 POST http://localhost:8000/TvShow
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwNjA5ODAsImV4cCI6MTY4NjA2NDU4MH0.1b2QPliKP6p3R86qI3rDXTDonuatsQyG6MZcDD5ENMM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2Y3NTVlOTgzODZkMGEwMDU2ZjYxZCIsIm5hbWUiOiJmcmFuY2lzY28gc3BvbnRvbiIsImVtYWlsIjoiZnJhbmNpc2NvLnNwb250b25AZ21haWwuY29tIiwiaWF0IjoxNjg2MDc0OTUzLCJleHAiOjE2ODYwNzg1NTN9.ruKzL6kdieBSifLgdF7uy_mRps2BJKaLHE9SzjFqbvw
 
 {
     "title":"Almorzando con Mirtha Legrand",
     "release":"1980",
     "language":"SPA",
-    "seasons":3,
-    "genres":["Thriller","Suspence"],
-    "id_actors": ["647de9d62eea3635a8a5aafa","647a455dc8af203df091ef29"],
-    "id_director": "647f438c8fe6e32274d50ffb"
+    "seasons":20,
+    "genres":["Comedy","Romance"],
+    "id_actors": ["647f790c98386d0a0056f63a","647f768c98386d0a0056f622"],
+    "id_director": "647f78e098386d0a0056f637"
 }
 
 
@@ -20,7 +20,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmN
 ### GET ALL TV SHOW
 GET http://localhost:8000/TvShow
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwNjA5ODAsImV4cCI6MTY4NjA2NDU4MH0.1b2QPliKP6p3R86qI3rDXTDonuatsQyG6MZcDD5ENMM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2Y3NTVlOTgzODZkMGEwMDU2ZjYxZCIsIm5hbWUiOiJmcmFuY2lzY28gc3BvbnRvbiIsImVtYWlsIjoiZnJhbmNpc2NvLnNwb250b25AZ21haWwuY29tIiwiaWF0IjoxNjg2MDc0OTUzLCJleHAiOjE2ODYwNzg1NTN9.ruKzL6kdieBSifLgdF7uy_mRps2BJKaLHE9SzjFqbvw
 
 ### Get tvshow by id
 GET http://localhost:8000/TvShow?id=647df5d82eea3635a8a5ab09
