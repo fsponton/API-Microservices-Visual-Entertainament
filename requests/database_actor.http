@@ -1,26 +1,26 @@
-### Create new actor
+### CREATE A NEW ACTOR
 POST http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMjEyNDYsImV4cCI6MTY4NjAyNDg0Nn0.h2cglQdaH_f827bJNyRWCw2xBNZupgu9AHF-C-6SsTg
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2Y3NTVlOTgzODZkMGEwMDU2ZjYxZCIsIm5hbWUiOiJmcmFuY2lzY28gc3BvbnRvbiIsImVtYWlsIjoiZnJhbmNpc2NvLnNwb250b25AZ21haWwuY29tIiwiaWF0IjoxNjg2MDc0OTUzLCJleHAiOjE2ODYwNzg1NTN9.ruKzL6kdieBSifLgdF7uy_mRps2BJKaLHE9SzjFqbvw
 
 {
-    "name":"tuki2",
-    "gender":"Male",
-    "birth_year":"03091988" 
+    "name":"Mirta Legrand",
+    "gender":"Female",
+    "birth_year":"1927" 
 }
 
-### Get list of Actors
+### GET LIST ACTORS
 GET http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMjEyNDYsImV4cCI6MTY4NjAyNDg0Nn0.h2cglQdaH_f827bJNyRWCw2xBNZupgu9AHF-C-6SsTg
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2Y3NTVlOTgzODZkMGEwMDU2ZjYxZCIsIm5hbWUiOiJmcmFuY2lzY28gc3BvbnRvbiIsImVtYWlsIjoiZnJhbmNpc2NvLnNwb250b25AZ21haWwuY29tIiwiaWF0IjoxNjg2MDc0OTUzLCJleHAiOjE2ODYwNzg1NTN9.ruKzL6kdieBSifLgdF7uy_mRps2BJKaLHE9SzjFqbvw
 
-### Get Actor By Id
+### GET ACTOR BY ID
 GET http://localhost:8000/Actor/647de9d62eea3635a8a5aafa
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5OTk4MzMsImV4cCI6MTY4NjAwMzQzM30.NKbiaSxmf-LBDXxz114Ux0gsR_ChKREvlPRvRjw_lus
 
 
-### Sort by Name
+### SORT BY PROP AND ORDER BY ASC OR DESC
 GET http://localhost:8000/Actor/sort?prop=name&shape=-1
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzI5OTIsImV4cCI6MTY4NTk3NjU5Mn0.zBBAGXcMYVsVuhg-JNQSoGiXzMU3QqE1V7j2C2wOd3A

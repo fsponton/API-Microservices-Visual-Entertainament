@@ -17,11 +17,20 @@ const tvShowSchema = Schema({
         required: true,
         lowercase: true,
     }],
-    id_actors: [{ type: String, ref: "Actor" }],
-    id_director: { type: String, ref: "Director" },
+    id_actors: {
+        type: [String],
+        required: true,
+        ref: "Actor",
+        validate: {
+            validator: (arr) => { return arr.length > 0 },
+            message: "Es necesario enviar al menos 1 id en array de id_actors",
+        },
+        minLength: [1, "El campo al menos tiene que tener 1 id"]
+    },
+    id_director: { type: String, ref: "Director", required: true },
     genres: [{
         type: String,
-        enum: ['Comedy', 'Drama', 'Crime', 'Action', 'Sci-Fi', 'Horror', 'Thriller', 'Adventure', 'Romance', 'Mistery', 'Fantasy']
+        enum: ['Comedy', 'Drama', 'Crime', 'Action', 'Suspence', 'Sci-Fi', 'Horror', 'Thriller', 'Adventure', 'Romance', 'Mistery', 'Fantasy']
     }]
 })
 

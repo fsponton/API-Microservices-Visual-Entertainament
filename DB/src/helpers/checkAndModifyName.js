@@ -14,7 +14,6 @@ module.exports = (props) => {
         arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
     }
 
-
     const value = arr.join(" ").trim()
 
     const keys = Object.keys(props)

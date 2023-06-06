@@ -43,10 +43,16 @@ actorSchema.statics.insert = async function (actor) {
 }
 
 actorSchema.statics.addMovie = async function (idActor, idMovie) {
-    console.log("iDDACTOR", typeof idActor)
-    let actorr = await this.findOne({ _id: idActor })
-    actorr.id_movies_protagonized.push(idMovie)
-    return await actorr.save()
+    let actor = await this.findOne({ _id: idActor })
+    actor.id_movies_protagonized.push(idMovie)
+    return await actor.save()
+}
+
+
+actorSchema.statics.addTvShow = async function (idActor, idTvShow) {
+    let actor = await this.findOne({ _id: idActor })
+    actor.id_tvshows_protagonized.push(idTvShow)
+    return await actor.save()
 }
 
 module.exports = actorSchema;

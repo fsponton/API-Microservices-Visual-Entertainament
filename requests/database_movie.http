@@ -1,31 +1,32 @@
-### Create a new Movie
+### CREATE A NEW MOVIE
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMTM4MzAsImV4cCI6MTY4NjAxNzQzMH0.mMzBmH4bY5vihnHGckoG8YRGHXtIFi7yhBm1Hu_e3zo
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwNzI5NjgsImV4cCI6MTY4NjA3NjU2OH0.OD8J6Vna2nHF6j7XLO7eomQIoeedldrhpq3QSC0R9P4
 
 {
-    "title":"titanicccddd",
+    "title":"figth club",
     "release":"2015",
     "language":"Eng",
     "genres":["Thriller","Suspence"],
-    "id_actors": ["647de9d62eea3635a8a5aafa","647a455dc8af203df091ef29"]
+    "id_actors":["647f76e798386d0a0056f625","647f768c98386d0a0056f622"],
+    "id_director": "647f776b98386d0a0056f629"
 }
 
 
 
-### Get all movies
+### GET LIST OF MOVIES
 GET http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMTM4MzAsImV4cCI6MTY4NjAxNzQzMH0.mMzBmH4bY5vihnHGckoG8YRGHXtIFi7yhBm1Hu_e3zo
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwNjA5ODAsImV4cCI6MTY4NjA2NDU4MH0.1b2QPliKP6p3R86qI3rDXTDonuatsQyG6MZcDD5ENMM
 
 
 
-### Get Movie By Id
+### GET MOVIE BY ID
 GET http://localhost:8000/Movie/647ddd3688c76e45cc594e27
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzY4MDQsImV4cCI6MTY4NTk4MDQwNH0.zTQkobsK-wqdGe0eOKro1NoumDvaVEC88vlxqEojRgg
 
-### Sort by title
+### SORT BY PROP AND ASC OR DESC 
 GET http://localhost:8000/Movie/sort?prop=release&shape=-1
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzM2NTEsImV4cCI6MTY4NTk3NzI1MX0.zO8HAR9CVHgHDkhldKV56R1bkX0EF0PMBL9FcjELKn8

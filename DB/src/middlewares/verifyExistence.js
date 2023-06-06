@@ -6,16 +6,18 @@ module.exports = async (req, res, next) => {
     const { model } = req.params
 
     const result = checkAndModifyName(req.body)
+    const value = result.value
+    const prop = result.propNameOrTitle
 
-    if (result.nameOrTitle === "title") {
-        const object = await store[model].findOne({ title: result.name })
-        if (object) return res.status(404).send({ status: "error", msg: `${model} with ${result.nameOrTitle}: ${result.value} already exist's` });
-        req.body.title = result.name
+    if (prop === "title") {
+        const object = await store[model].findOne({ title: value })
+        if (object) return res.status(404).send({ status: "error", msg: `${model} with ${prop}: ${value} already exist's` });
     } else {
-        const object = await store[model].findOne({ name: result.name })
-        if (object) return res.status(404).send({ status: "error", msg: `${model} with ${result.nameOrTitle}: ${result.value} already exist's` });
-        req.body.name = result.name
+        const object = await store[model].findOne({ name: value })
+        if (object) return res.status(404).send({ status: "error", msg: `${model} with ${prop}: ${value} already exist's` });
     }
+
+    req.body[prop] = value
 
     next()
 }
