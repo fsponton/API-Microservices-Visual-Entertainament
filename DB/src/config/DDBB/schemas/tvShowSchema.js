@@ -27,14 +27,14 @@ const tvShowSchema = Schema({
 
 tvShowSchema.statics.list = async function () {
     return await this.find()
-        .populate("actors", ["name"])
-        .populate("director", ["name"])
+        .populate("id_actors", ["id", "name"])
+        .populate("id_director", ["id", "name"])
 }
 
 tvShowSchema.statics.ById = async function (id) {
     return await this.findById(id)
-        .populate("Actor", ["name"])
-        .populate("Director", ["name"])
+        .populate("id_actors", ["id", "name"])
+        .populate("id_director", ["id", "name"])
 }
 
 tvShowSchema.statics.order = async function (attributes) {

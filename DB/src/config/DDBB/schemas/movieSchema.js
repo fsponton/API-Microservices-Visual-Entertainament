@@ -1,5 +1,6 @@
 const { Schema } = require("mongoose")
 
+
 const movieSchema = Schema({
     _id: String,
     title: {
@@ -36,19 +37,24 @@ movieSchema.statics.ById = async function (id) {
 }
 
 
-/// al crear la pelicula y relacionarla con id del actor, 
-//previamente cargado, que se actualice el actor con el id de la movie recien creada
-
 movieSchema.statics.order = async function (attributes) {
     return await this.find().sort(attributes)
 }
 
 
 
+/// al crear la pelicula, relacionarla con cada id de id_actors, 
+// previamente el acgtor debe estar cargado,  actualice el actor con el id de la movie recien creada
+movieSchema.statics.insert = async function (form) {
+    return await this.create(form)
+    // const id_actors = form.id_actors
+    // const idMovie = movie._id
+    // for (const idActor of id_actors) {
+    //     console.log(Actor)
+    //     await Actor.statics.addMovie({ idActor, idMovie })
+    // }
 
-movieSchema.statics.insert = async function (movie) {
-    console.log(movie)
-    return await this.create(movie)
+    return movie
 }
 
 module.exports = movieSchema;

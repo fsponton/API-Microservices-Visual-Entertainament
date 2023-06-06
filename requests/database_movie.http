@@ -1,13 +1,14 @@
 ### Create a new Movie
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5OTU2NzMsImV4cCI6MTY4NTk5OTI3M30.8M2s_lnTdTrsNnk-oW_6YXQOA9dP3kox7hDYVLMN9ys
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMTM4MzAsImV4cCI6MTY4NjAxNzQzMH0.mMzBmH4bY5vihnHGckoG8YRGHXtIFi7yhBm1Hu_e3zo
 
 {
-    "title":"titanic",
+    "title":"titanicccddd",
     "release":"2015",
     "language":"Eng",
-    "genres":["Thriller","Suspence"]
+    "genres":["Thriller","Suspence"],
+    "id_actors": ["647de9d62eea3635a8a5aafa","647a455dc8af203df091ef29"]
 }
 
 
@@ -15,7 +16,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3Z
 ### Get all movies
 GET http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NjkyMjIsImV4cCI6MTY4NTk3MjgyMn0.39cb9GVKWmB0SZs2kAficvFQkkvhdANY7DJ1RZ2hz-g
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMTM4MzAsImV4cCI6MTY4NjAxNzQzMH0.mMzBmH4bY5vihnHGckoG8YRGHXtIFi7yhBm1Hu_e3zo
 
 
 

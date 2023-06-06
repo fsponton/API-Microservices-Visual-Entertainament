@@ -1,6 +1,5 @@
 const { Schema } = require("mongoose")
 
-
 const actorSchema = Schema({
     _id: String,
     name: {
@@ -41,6 +40,13 @@ actorSchema.statics.order = async function (attributes) {
 
 actorSchema.statics.insert = async function (actor) {
     return await this.create(actor)
+}
+
+actorSchema.statics.addMovie = async function (idActor, idMovie) {
+    console.log("iDDACTOR", typeof idActor)
+    let actorr = await this.findOne({ _id: idActor })
+    actorr.id_movies_protagonized.push(idMovie)
+    return await actorr.save()
 }
 
 module.exports = actorSchema;

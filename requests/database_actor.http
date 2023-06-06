@@ -1,10 +1,10 @@
 ### Create new actor
 POST http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzI5OTIsImV4cCI6MTY4NTk3NjU5Mn0.zBBAGXcMYVsVuhg-JNQSoGiXzMU3QqE1V7j2C2wOd3A
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwMDUzMTAsImV4cCI6MTY4NjAwODkxMH0.VMTE67PbxuKgN2X02rD9zH73J5e3fEouNl-LKk56PiQ
 
 {
-    "name":"copperfield",
+    "name":"ssssssss",
     "gender":"Male",
     "birth_year":"03091988" 
 }
@@ -12,13 +12,13 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3Z
 ### Get list of Actors
 GET http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NjkyMjIsImV4cCI6MTY4NTk3MjgyMn0.39cb9GVKWmB0SZs2kAficvFQkkvhdANY7DJ1RZ2hz-g
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5OTU2NzMsImV4cCI6MTY4NTk5OTI3M30.8M2s_lnTdTrsNnk-oW_6YXQOA9dP3kox7hDYVLMN9ys
 
 
 ### Get Actor By Id
-GET http://localhost:8000/Actor?id=647a455dc8af203df091ef29
+GET http://localhost:8000/Actor/647de9d62eea3635a8a5aafa
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NjkyMjIsImV4cCI6MTY4NTk3MjgyMn0.39cb9GVKWmB0SZs2kAficvFQkkvhdANY7DJ1RZ2hz-g
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5OTk4MzMsImV4cCI6MTY4NjAwMzQzM30.NKbiaSxmf-LBDXxz114Ux0gsR_ChKREvlPRvRjw_lus
 
 
 ### Sort by Name
