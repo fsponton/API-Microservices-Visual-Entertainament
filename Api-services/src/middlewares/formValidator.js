@@ -1,4 +1,4 @@
-const { validateMovie } = require("../helpers")
+const { validateMovie } = require("../../../DB/src/helpers")
 
 //Middlware - Check existence an object in model
 module.exports = async (req, res, next) => {
@@ -12,8 +12,8 @@ module.exports = async (req, res, next) => {
         TvShow: () => validateTvShow('tvshow')
 
     }
-    console.log("llego aca")
+
     await checkObjectToCreate[model]
-    console.log("y aca?")
+
     next()
 }

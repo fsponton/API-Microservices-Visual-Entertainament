@@ -10,15 +10,15 @@ server.use(express.json());
 
 server.use(require("./routes"))
 
-// si uno pone una ruta que no existe se ve el siguiente error.
+// error - route invalid
 server.use("*", (req, res) => {
     res.status(404).send("Not found")
 })
 
 
-
-//los errores q ocurren en cualquier lugar llegan aca, por ejemplo si falta algun dato en un metodo post. 
+//Ocurred Errors in DB
 server.use((err, req, res, next) => {
+
     //Errors - validation schemas
     if (err.name === 'ValidationError') {
         return res.status(401).send({
@@ -26,6 +26,7 @@ server.use((err, req, res, next) => {
             message: Object.values(err.errors).map(val => val.message)[0]
         })
     }
+
     //Error - expired token
     if (err.name === "TokenExpiredError") {
         return res.status(401).send({
@@ -34,13 +35,13 @@ server.use((err, req, res, next) => {
         })
     }
 
+    console.log(err)
     //Error - others
-    return res.status(err.status || 500).send({
+    return res.status(err.statusCode || 500).send({
         error: true,
-        message: err.data.message
+        message: err.message
     })
 })
-
 
 
 module.exports = server;

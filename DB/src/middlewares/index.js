@@ -4,5 +4,4 @@ module.exports = {
     verifyExistenceUser: require("./verifyExistenceUser"),
     verifyExistence: require("./verifyExistence"),
     validateModel: require("./validateModel"),
-    formValidator: require("./formValidator")
 }

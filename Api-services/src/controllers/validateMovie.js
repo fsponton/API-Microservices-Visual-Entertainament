@@ -1,5 +1,4 @@
-const { ClientError } = require("../utils/errors")
-const Movie = require("../config/DDBB/schemas/movieSchema")
+
 module.exports = ({ form }) => {
     // for (let prop in form) {
     //     if (!form[prop]) throw new ClientError(`Falta el valor de ${prop}`, 401)

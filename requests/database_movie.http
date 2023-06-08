@@ -1,13 +1,14 @@
 ### CREATE A NEW MOVIE
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnJhbmNpc2NvIHNwb250b24iLCJlbWFpbCI6ImZyYW5jaXNjby5zcG9udG9uQGdtYWlsLmNvbSIsImlhdCI6MTY4NjE4MTcyMSwiZXhwIjoxNjg2MTg1MzIxfQ.HrIZfr0AhoBoWU_aCKnrssw1mD1aYZoQc2AJGnB5yLI
+Authorization: bearer eyJhbGciOjJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnJhbmNpc2NvIHNwb250b24iLCJlbWFpbCI6ImZyYW5jaXNjby5zcG9udG9uQGdtYWlsLmNvbSIsImlhdCI6MTY4NjE4NDQ3MywiZXhwIjoxNjg2MTg0NTMzfQ.JlHUm_eYHD_gXdnpakio1OJ4-nK2DdsUDg4CeJouvtc
 
 {
-    "title":"",
+    "title":"affffdsfffffffffffffffffffsssssssssaa",
     "release":"2015",
     "language":"Eng",
     "genres":["Thriller","Suspence"],
+    "id_actors":["647f768c98386d0a0056f622"],
     "id_director": "647f776b98386d0a0056f629"
 }
 
