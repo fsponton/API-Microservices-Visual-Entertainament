@@ -1,6 +1,6 @@
 const express = require("express");
 const morgan = require("morgan")
-
+const { modelError } = require("./utils/errors")
 const server = express();
 
 
@@ -10,13 +10,13 @@ server.use(express.json());
 
 server.use(require("./routes"))
 
-// error - route invalid
+//Error - route invalid
 server.use("*", (req, res) => {
-    res.status(404).send("Not found")
+    throw new modelError(`Invalid route, please check`, 404)
 })
 
 
-//Ocurred Errors in DB
+//Ocurred Errors 
 server.use((err, req, res, next) => {
 
     //Errors - validation schemas
@@ -28,17 +28,17 @@ server.use((err, req, res, next) => {
     }
 
     //Error - expired token
-    if (err.name === "TokenExpiredError") {
+    if (err.name === "TokenExpiredError" || err.name === "JsonWebTokenError") {
         return res.status(401).send({
             error: true,
-            message: `Expired Session, please login`
+            message: `Expired Session or invalid token, please login again`
         })
     }
 
-    console.log(err)
     //Error - others
     return res.status(err.statusCode || 500).send({
         error: true,
+        errorName: err.name,
         message: err.message
     })
 })

@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken")
 const { PASSWORD_SIGN } = require("../config/enviroments")
+const { tokenError } = require("../utils/errors")
 
 //Middleware - Verify token 
 module.exports = (req, res, next) => {
@@ -8,13 +9,14 @@ module.exports = (req, res, next) => {
 
     if (authorization && authorization.toLowerCase().startsWith('bearer')) {
         token = authorization.substring(7)
-    } else { return res.status(401).send({ error: "true", message: "Invalid authorization" }) }
+    } else {
+        throw new tokenError('Invalid authorization', 401)
+    }
 
     const decodedToken = jwt.verify(token, `${PASSWORD_SIGN}`)
 
-    if (!token || !decodedToken) {
-        return res.status(401).json({ error: "true", message: 'Token missing or invalid' })
-    }
+    if (!token || !decodedToken) { throw new tokenError('Token missing or invalid', 401) }
+
 
     next()
 }

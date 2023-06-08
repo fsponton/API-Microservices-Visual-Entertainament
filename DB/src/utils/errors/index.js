@@ -15,5 +15,20 @@ class tokenError extends Error {
     }
 }
 
+class userError extends Error {
+    constructor(message, statusCode = 401) {
+        super(message);
+        this.name = 'userError'
+        this.statusCode = statusCode;
+    }
+}
 
-module.exports = { modelError, tokenError };
+class objectError extends Error {
+    constructor(message, statusCode = 401) {
+        super(message);
+        this.name = 'objectError'
+        this.statusCode = statusCode;
+    }
+}
+
+module.exports = { modelError, tokenError, userError, objectError };

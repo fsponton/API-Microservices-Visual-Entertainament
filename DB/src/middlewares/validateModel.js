@@ -3,8 +3,10 @@ const { ENTITIES } = require("../config/enviroments")
 
 module.exports = (req, res, next) => {
     const { model } = req.params
-    if (!(ENTITIES.includes(model))) {
+    if ((ENTITIES.includes(model))) {
+        return next()
+    } else {
         throw new modelError(`Invalid route, please check`, 404)
     }
-    next()
+
 }

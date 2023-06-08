@@ -1,7 +1,9 @@
+const { catchedAsync } = require("../utils")
+
 module.exports = {
     verifyUser: require("./verifyUser"),
-    verifyLogin: require("./verifyLogin"),
-    verifyExistenceUser: require("./verifyExistenceUser"),
-    verifyExistence: require("./verifyExistence"),
+    verifyLogin: catchedAsync(require("./verifyLogin")),
+    verifyExistenceUser: catchedAsync(require("./verifyExistenceUser")),
+    verifyExistence: catchedAsync(require("./verifyExistence")),
     validateModel: require("./validateModel"),
 }

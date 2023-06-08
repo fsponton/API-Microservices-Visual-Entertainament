@@ -33,6 +33,11 @@ directorSchema.statics.insert = async function (director) {
 }
 
 
+directorSchema.statics.order = async function (attributes) {
+    return await this.find().sort(attributes)
+}
+
+
 directorSchema.statics.addMovie = async function (idDirector, idMovie) {
     let director = await this.findOne({ _id: idDirector })
     director.id_movies_directed.push(idMovie)

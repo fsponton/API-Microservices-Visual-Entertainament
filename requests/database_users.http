@@ -1,10 +1,10 @@
 #### Register User
 POST http://localhost:8000/User/register
-Content-Type: application/json
+Content-Type: application/json  
 
 {
-    "name":"Francisco Sponton",
-    "email":"francisco.sponton@gmail.com ",
+    "name":"fsponton",
+    "email":"f@gmail.com",
     "password":"123456",
     "gender":"Male"
 }
@@ -15,8 +15,8 @@ POST http://localhost:8000/User/login
 Content-Type: application/json
 
 {
-    "email":" francisco.sponton@gmail.com  ",
-    "password":"1234a56"
+    "email":" f@gmail.com  ",
+    "password":"123456"
 }
 
 

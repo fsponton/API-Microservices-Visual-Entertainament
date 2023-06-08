@@ -1,15 +1,15 @@
 ### CREATE A NEW MOVIE
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOjJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnJhbmNpc2NvIHNwb250b24iLCJlbWFpbCI6ImZyYW5jaXNjby5zcG9udG9uQGdtYWlsLmNvbSIsImlhdCI6MTY4NjE4NDQ3MywiZXhwIjoxNjg2MTg0NTMzfQ.JlHUm_eYHD_gXdnpakio1OJ4-nK2DdsUDg4CeJouvtc
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b24iLCJlbWFpbCI6ImZAZ21haWwuY29tIiwiaWF0IjoxNjg2MjU3NjQ4LCJleHAiOjE2ODYyNTg4NDh9.rgMMsUcctOyCB5oWWX8-ipRJdxMRAffrJcDh_Rc9U84
 
 {
-    "title":"affffdsfffffffffffffffffffsssssssssaa",
+    "title":"pokemon demonic stephen kiiing",
     "release":"2015",
     "language":"Eng",
     "genres":["Thriller","Suspence"],
-    "id_actors":["647f768c98386d0a0056f622"],
-    "id_director": "647f776b98386d0a0056f629"
+    "id_actors":["6482400d45ff9d64b0554c89"],
+    "id_director": "6482407c45ff9d64b0554c91"
 }
 
 

@@ -1,25 +1,25 @@
 ### CREATE A NEW ACTOR
 POST http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnJhbmNpc2NvIHNwb250b24iLCJlbWFpbCI6ImZyYW5jaXNjby5zcG9udG9uQGdtYWlsLmNvbSIsImlhdCI6MTY4NjE3NjY2NywiZXhwIjoxNjg2MTgwMjY3fQ.iP15qYA9O693ghBkBqM-JtBOOcenEfAsVpzTYApGFTk
-{
-    "name":"Mirta Legrand",
-    "gender":"Female",
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b24iLCJlbWFpbCI6ImZAZ21haWwuY29tIiwiaWF0IjoxNjg2MjU3NjQ4LCJleHAiOjE2ODYyNTg4NDh9.rgMMsUcctOyCB5oWWX8-ipRJdxMRAffrJcDh_Rc9U84
+
+{    "name":"s",
+    "gender":"Male",
     "birth_year":"1927" 
 }
 
 ### GET LIST ACTORS
 GET http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnJhbmNpc2NvIHNwb250b24iLCJlbWFpbCI6ImZyYW5jaXNjby5zcG9udG9uQGdtYWlsLmNvbSIsImlhdCI6MTY4NjE4NDM0NCwiZXhwIjoxNjg2MTg3OTQ0fQ.hZqTguKTphRwk-wFHy6-HKeqWCNbKcEAghyk1Lu9AHM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b24iLCJlbWFpbCI6ImZAZ21haWwuY29tIiwiaWF0IjoxNjg2MjU3NjQ4LCJleHAiOjE2ODYyNTg4NDh9.rgMMsUcctOyCB5oWWX8-ipRJdxMRAffrJcDh_Rc9U84
 
 ### GET ACTOR BY ID
-GET http://localhost:8000/Actor/647de9d62eea3635a8a5aafa
+GET http://localhost:8000/Actor/6482400d45ff9d64b0554c89
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5OTk4MzMsImV4cCI6MTY4NjAwMzQzM30.NKbiaSxmf-LBDXxz114Ux0gsR_ChKREvlPRvRjw_lus
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b24iLCJlbWFpbCI6ImZAZ21haWwuY29tIiwiaWF0IjoxNjg2MjU3NjQ4LCJleHAiOjE2ODYyNTg4NDh9.rgMMsUcctOyCB5oWWX8-ipRJdxMRAffrJcDh_Rc9U84
 
 
 ### SORT BY PROP AND ORDER BY ASC OR DESC
 GET http://localhost:8000/Actor/sort?prop=name&shape=-1
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2E0NWI3ZGQ3ODEwNjIzYzhmNjcwYSIsIm5hbWUiOiJ7ZnN0dHRkZHN9IiwiZW1haWwiOiJmcmFuY2lzY28uc3BvbnRvbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU5NzI5OTIsImV4cCI6MTY4NTk3NjU5Mn0.zBBAGXcMYVsVuhg-JNQSoGiXzMU3QqE1V7j2C2wOd3A
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b24iLCJlbWFpbCI6ImZAZ21haWwuY29tIiwiaWF0IjoxNjg2MjU3NjQ4LCJleHAiOjE2ODYyNTg4NDh9.rgMMsUcctOyCB5oWWX8-ipRJdxMRAffrJcDh_Rc9U84

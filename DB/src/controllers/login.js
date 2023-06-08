@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
         email: user.email
     }
 
-    const token = jwt.sign(userForToken, `${PASSWORD_SIGN}`, { expiresIn: 60 * 1 })
+    const token = jwt.sign(userForToken, `${PASSWORD_SIGN}`, { expiresIn: 60 * 20 })
 
     res.status(200)
         .header({ token })

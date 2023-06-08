@@ -1,5 +1,6 @@
 const store = require("../config/DDBB/index")
 const { checkAndModifyName } = require("../helpers")
+const { objectError, userError } = require("../utils/errors")
 
 //Middlware - Check existence an object in model
 module.exports = async (req, res, next) => {
@@ -11,10 +12,10 @@ module.exports = async (req, res, next) => {
 
     if (prop === "title") {
         const object = await store[model].findOne({ title: value })
-        if (object) return res.status(404).send({ error: "true", message: `${model} with ${prop}: ${value} already exist's` });
+        if (object) { throw new objectError(`${model} with ${prop}: ${value} already exist's`, 404) }
     } else {
         const object = await store[model].findOne({ name: value })
-        if (object) return res.status(404).send({ error: "true", message: `${model} with ${prop}: ${value} already exist's` });
+        if (object) { throw new objectError(`${model} with ${prop}: ${value} already exist's`, 404) }
     }
 
     req.body[prop] = value
