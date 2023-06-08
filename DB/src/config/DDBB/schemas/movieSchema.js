@@ -28,6 +28,7 @@ const movieSchema = Schema({
     id_director: { type: String, ref: "Director", required: true },
     genres: [{
         type: String,
+        required: true,
         enum: ['Comedy', 'Drama', 'Crime', 'Action', 'Sci-Fi', 'Horror', 'Suspence', 'Thriller', 'Adventure', 'Romance', 'Mistery', 'Fantasy']
     }]
 })

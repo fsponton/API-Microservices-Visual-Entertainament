@@ -1,8 +1,7 @@
 ### CREATE A NEW ACTOR
 POST http://localhost:8000/Actor
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2Y3NTVlOTgzODZkMGEwMDU2ZjYxZCIsIm5hbWUiOiJmcmFuY2lzY28gc3BvbnRvbiIsImVtYWlsIjoiZnJhbmNpc2NvLnNwb250b25AZ21haWwuY29tIiwiaWF0IjoxNjg2MDc0OTUzLCJleHAiOjE2ODYwNzg1NTN9.ruKzL6kdieBSifLgdF7uy_mRps2BJKaLHE9SzjFqbvw
-
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnJhbmNpc2NvIHNwb250b24iLCJlbWFpbCI6ImZyYW5jaXNjby5zcG9udG9uQGdtYWlsLmNvbSIsImlhdCI6MTY4NjE3NjY2NywiZXhwIjoxNjg2MTgwMjY3fQ.iP15qYA9O693ghBkBqM-JtBOOcenEfAsVpzTYApGFTk
 {
     "name":"Mirta Legrand",
     "gender":"Female",

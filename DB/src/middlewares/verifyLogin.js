@@ -12,7 +12,7 @@ module.exports = async (req, res, next) => {
     const encryptedPassword = user === null ? false
         : await bcrypt.compare(password, user.password)
 
-    if (!(user && encryptedPassword)) return res.status(401).send({ status: "error", msg: 'Invalid user or password' });
+    if (!(user && encryptedPassword)) return res.status(401).send({ error: "true", message: 'Invalid user or password' });
 
     req.user = user
 

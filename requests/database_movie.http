@@ -1,14 +1,13 @@
 ### CREATE A NEW MOVIE
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwNzI5NjgsImV4cCI6MTY4NjA3NjU2OH0.OD8J6Vna2nHF6j7XLO7eomQIoeedldrhpq3QSC0R9P4
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnJhbmNpc2NvIHNwb250b24iLCJlbWFpbCI6ImZyYW5jaXNjby5zcG9udG9uQGdtYWlsLmNvbSIsImlhdCI6MTY4NjE4MTcyMSwiZXhwIjoxNjg2MTg1MzIxfQ.HrIZfr0AhoBoWU_aCKnrssw1mD1aYZoQc2AJGnB5yLI
 
 {
-    "title":"figth club",
+    "title":"",
     "release":"2015",
     "language":"Eng",
     "genres":["Thriller","Suspence"],
-    "id_actors":["647f76e798386d0a0056f625","647f768c98386d0a0056f622"],
     "id_director": "647f776b98386d0a0056f629"
 }
 

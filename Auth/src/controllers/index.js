@@ -1,3 +1,6 @@
+const { catchedAsync } = require("../utils")
+
+
 module.exports = {
-    register: require("./register")
+    register: catchedAsync(require("./register"))
 }

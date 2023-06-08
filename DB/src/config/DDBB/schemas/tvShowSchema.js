@@ -30,6 +30,7 @@ const tvShowSchema = Schema({
     id_director: { type: String, ref: "Director", required: true },
     genres: [{
         type: String,
+        required: true,
         enum: ['Comedy', 'Drama', 'Crime', 'Action', 'Suspence', 'Sci-Fi', 'Horror', 'Thriller', 'Adventure', 'Romance', 'Mistery', 'Fantasy']
     }]
 })

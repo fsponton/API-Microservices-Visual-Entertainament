@@ -1,3 +1,5 @@
+const catchedAsync = require("../utils/catchedAsync")
+
 module.exports = {
-    userValidation: require("./userValidation")
+    formValidation: require("./formValidation")
 }

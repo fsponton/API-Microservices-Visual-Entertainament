@@ -11,10 +11,10 @@ module.exports = async (req, res, next) => {
 
     if (prop === "title") {
         const object = await store[model].findOne({ title: value })
-        if (object) return res.status(404).send({ status: "error", msg: `${model} with ${prop}: ${value} already exist's` });
+        if (object) return res.status(404).send({ error: "true", message: `${model} with ${prop}: ${value} already exist's` });
     } else {
         const object = await store[model].findOne({ name: value })
-        if (object) return res.status(404).send({ status: "error", msg: `${model} with ${prop}: ${value} already exist's` });
+        if (object) return res.status(404).send({ error: "true", message: `${model} with ${prop}: ${value} already exist's` });
     }
 
     req.body[prop] = value

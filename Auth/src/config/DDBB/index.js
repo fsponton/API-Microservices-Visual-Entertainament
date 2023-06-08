@@ -8,8 +8,6 @@ module.exports = {
             data: form,
         })
     }
-
-
 }
 
 

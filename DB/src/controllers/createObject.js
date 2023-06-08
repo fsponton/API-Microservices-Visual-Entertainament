@@ -8,8 +8,8 @@ module.exports = async (req, res) => {
     const form = req.body
 
     const _id = new mongoose.Types.ObjectId;
-    const result = await store[model].insert({ ...form, _id })
 
+    const result = await store[model].insert({ ...form, _id })
 
     if (result instanceof Movie) {
         const id_actors = form.id_actors

@@ -3,5 +3,6 @@ module.exports = {
     verifyLogin: require("./verifyLogin"),
     verifyExistenceUser: require("./verifyExistenceUser"),
     verifyExistence: require("./verifyExistence"),
-    validateModel: require("./validateModel")
+    validateModel: require("./validateModel"),
+    formValidator: require("./formValidator")
 }

@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
 
     res.status(200)
         .header({ token })
-        .json({ status: "OK", msg: `User ${user.email} is logged` })
+        .json({ error: "false", message: `User ${user.email} is logged` })
 }
 
 

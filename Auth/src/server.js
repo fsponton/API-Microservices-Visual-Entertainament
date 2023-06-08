@@ -13,12 +13,13 @@ server.use("*", (req, res) => {
 })
 
 
+
 //los errores q ocurren en cualquier lugar llegan aca, por ejemplo si falta algun dato en un metodo post. 
-// server.use((err, req, res, next) => {
-//     res.status(err.statusCode || 500).send({
-//         error: true,
-//         message: err.message
-//     })
-// })
+server.use((err, req, res, next) => {
+    return res.status(err.response.status || 500).send({
+        error: true,
+        message: err.response.data.message
+    })
+})
 
 module.exports = server;

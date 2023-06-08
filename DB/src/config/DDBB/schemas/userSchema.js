@@ -1,7 +1,7 @@
 const { Schema } = require("mongoose")
 
-const YYYYYYYYUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUSchema = Schema({
-    _id: String,
+const userSchema = Schema({
+    id: String,
     name: {
         type: String,
         required: true,

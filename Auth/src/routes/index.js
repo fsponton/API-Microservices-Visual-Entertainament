@@ -5,7 +5,7 @@ const middleware = require("../middlewares")
 
 
 
-router.post("/User/register", middleware.userValidation, controller.register)
+router.post("/User/register", middleware.formValidation, controller.register)
 
 
 
