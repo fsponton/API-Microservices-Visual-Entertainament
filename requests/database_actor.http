@@ -3,7 +3,7 @@ POST http://localhost:8000/Actor
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b24iLCJlbWFpbCI6ImZAZ21haWwuY29tIiwiaWF0IjoxNjg2MjU3NjQ4LCJleHAiOjE2ODYyNTg4NDh9.rgMMsUcctOyCB5oWWX8-ipRJdxMRAffrJcDh_Rc9U84
 
-{    "name":"s",
+{    "name":"",
     "gender":"Male",
     "birth_year":"1927" 
 }

@@ -1,27 +1,14 @@
-const validationError = require("../utils/errors")
-
-module.exports = async (req, res, next) => {
-    const { form } = req.body
+const { validationError } = require("../utils/errors")
+const validator = require("validator")
+module.exports = (req, res, next) => {
+    let form = req.body
 
     for (let prop in form) {
-        if (!form[prop]) throw new validationError(`Missing value on prop: ${prop}`, 401)
+        if (!form[prop]) { throw new validationError(`Required value on prop: ${prop}`, 401) }
     }
 
-    next()
+    if (!(validator.isEmail(form.email.trim()))) { throw new validationError('Invalid Email') }
 
+    return next()
 
-
-    // const form = { name, email, gender, password }
-
-    // const props = []
-    // for (let prop in form) {
-    //     if (!form[prop]) props.push(prop)
-    // }
-
-
-    // const string = props.toString(" ").slice(props.length)
-
-    // if (props.length) return res.status(400).send({ error: "true", mesagge: `Missing value on props: ${string}` })
-
-    // next()
 }

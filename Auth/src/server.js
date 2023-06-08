@@ -5,21 +5,29 @@ const server = express();
 server.use(morgan("dev"));
 server.use(express.json());
 
-server.use("/", require("./routes"));
+server.use(require("./routes"));
 
-// si uno pone una ruta que no existe se ve el siguiente error.
+
 server.use("*", (req, res) => {
     res.status(404).send("Not found")
 })
 
 
-
-//los errores q ocurren en cualquier lugar llegan aca, por ejemplo si falta algun dato en un metodo post. 
 server.use((err, req, res, next) => {
+
+    //validation form error (register/login)
+    if (err.name === "validationError") {
+        return res.status(err.status).send({
+            error: true,
+            message: err.message
+        })
+    }
+
+    //error responses from db
     return res.status(err.response.status || 500).send({
         error: true,
+        errorName: err.response.data.name,
         message: err.response.data.message
     })
 })
-
 module.exports = server;

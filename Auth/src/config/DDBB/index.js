@@ -7,6 +7,13 @@ module.exports = {
             url: "http://localhost:8000/User/register",
             data: form,
         })
+    },
+    login: async (form) => {
+        return await axios({
+            method: "post",
+            url: "http://localhost:8000/User/login",
+            data: form,
+        })
     }
 }
 

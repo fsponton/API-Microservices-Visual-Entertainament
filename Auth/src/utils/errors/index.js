@@ -1,10 +1,9 @@
 class validationError extends Error {
-    constructor(message, statusCode = 400) {
+    constructor(message, status = 400) {
         super(message);
         this.name = 'validationError'
-        this.statusCode = statusCode;
+        this.status = status;
     }
 }
-
 
 module.exports = { validationError };
