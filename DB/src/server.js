@@ -13,7 +13,7 @@ server.use(require("./routes"))
 //Error - route invalid
 //for log
 server.use("*", () => {
-    throw new modelError(`Invalid route, please checkkk`, 404)
+    throw new modelError(`Invalid route, please check`, 404)
 })
 
 

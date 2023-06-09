@@ -8,5 +8,4 @@ module.exports = (req, res, next) => {
     } else {
         throw new modelError(`Invalid route, please check`, 404)
     }
-
 }

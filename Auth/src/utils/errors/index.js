@@ -6,4 +6,13 @@ class validationError extends Error {
     }
 }
 
-module.exports = { validationError };
+class modelError extends Error {
+    constructor(message, code = 400) {
+        super(message);
+        this.name = 'modelError'
+        this.code = code;
+    }
+}
+
+
+module.exports = { validationError, modelError };

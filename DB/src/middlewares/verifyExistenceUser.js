@@ -6,13 +6,13 @@ const { userError } = require("../utils/errors")
 module.exports = async (req, res, next) => {
     const { email, password, name, gender } = req.body
 
-    if (!email || !password || !name) { throw new userError(`Email, password and name are required`, 401) }
+    if (!email || !password || !name) { throw new userError(`Email, password and name are required`, 400) }
 
     const emailLower = email.toLowerCase().trim()
 
     const user = await User.findOne({ email: emailLower })
 
-    if (user) { throw new userError(`User with ${email} already exist's`) }
+    if (user) { throw new userError(`User with ${email} already exist's`, 400) }
 
 
     req.form = {
@@ -22,5 +22,5 @@ module.exports = async (req, res, next) => {
         gender
     }
 
-    next()
+    return next()
 }

@@ -5,11 +5,7 @@ const actorSchema = Schema({
     name: {
         type: String,
         required: true,
-        lowercase: true,
-        validate: {
-            validator: (string) => { return string.length > 0 },
-            message: "Name is required",
-        },
+        lowercase: true
     },
     gender: {
         type: String,

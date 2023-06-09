@@ -5,6 +5,9 @@ const { objectError, userError } = require("../utils/errors")
 //Middlware - Check existence an object in model
 module.exports = async (req, res, next) => {
     const { model } = req.params
+    const { title, name } = req.body
+
+    if (!(title || name)) { throw new userError('Check name or title', 400) }
 
     const result = checkAndModifyName(req.body)
     const value = result.value
@@ -12,10 +15,10 @@ module.exports = async (req, res, next) => {
 
     if (prop === "title") {
         const object = await store[model].findOne({ title: value })
-        if (object) { throw new objectError(`${model} with ${prop}: ${value} already exist's`, 404) }
+        if (object) { throw new objectError(`${model} with ${prop}: ${value} already exist's`, 400) }
     } else {
         const object = await store[model].findOne({ name: value })
-        if (object) { throw new objectError(`${model} with ${prop}: ${value} already exist's`, 404) }
+        if (object) { throw new objectError(`${model} with ${prop}: ${value} already exist's`, 400) }
     }
 
     req.body[prop] = value

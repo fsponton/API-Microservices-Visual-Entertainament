@@ -15,26 +15,26 @@ router.post("/:model/login",
     middleware.verifyLogin,
     controller.login)
 
-//POST Create, polimorfic, for any entity.
+//POST Create object, polimorfic, for any entity.
 router.post("/:model",
     middleware.validateModel,
     middleware.verifyUser,
     middleware.verifyExistence,
     controller.createObject)
 
-// GET SORTED LIST, polimorfic, for any entity.  /sort?prop=release&shape=-1
+// GET SORTED LIST Objects, polimorfic, for any entity.  /sort?prop=release&shape=-1 
 router.get("/:model/sort/",
     middleware.validateModel,
     middleware.verifyUser,
     controller.orderByProp)
 
-//GET LIST, polimorfic, for any entity.
+//GET LIST Objects, polimorfic, for any entity.
 router.get("/:model/",
     middleware.validateModel,
     middleware.verifyUser,
     controller.getList)
 
-//GET by id, polimorfic, for any entity.
+//GET object by id, polimorfic, for any entity.
 router.get("/:model/:id",
     middleware.validateModel,
     middleware.verifyUser,

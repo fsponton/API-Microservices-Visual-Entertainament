@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const { modelError } = require("./utils/errors");
 
 const server = express();
 server.use(morgan("dev"));
@@ -9,7 +10,7 @@ server.use(require("./routes"));
 
 
 server.use("*", (req, res) => {
-    res.status(404).send("Not found")
+    throw new modelError(`Invalid route, please check`, 404)
 })
 
 
@@ -21,8 +22,6 @@ server.use((err, req, res, next) => {
             message: err.message
         })
     }
-
-    console.log(err)
 
     //error responses from db
     return res.status(err.response.status || 500).send({

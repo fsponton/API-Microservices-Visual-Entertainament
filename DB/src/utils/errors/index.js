@@ -1,5 +1,5 @@
 class modelError extends Error {
-    constructor(message, code = 404) {
+    constructor(message, code = 400) {
         super(message);
         this.name = 'modelError'
         this.code = code;
@@ -24,7 +24,7 @@ class userError extends Error {
 }
 
 class objectError extends Error {
-    constructor(message, code = 401) {
+    constructor(message, code = 404) {
         super(message);
         this.name = 'objectError'
         this.code = code;

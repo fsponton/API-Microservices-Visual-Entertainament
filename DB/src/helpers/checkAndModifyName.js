@@ -5,7 +5,6 @@ module.exports = (props) => {
     if (props.name) {
         arr = props.name.split(" ")
     } else {
-        console.log(props.title)
         arr = props.title.split(" ")
     }
 
