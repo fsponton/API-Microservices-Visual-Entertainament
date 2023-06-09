@@ -3,8 +3,8 @@ POST http://localhost:8000/User/register
 Content-Type: application/json  
 
 {
-    "name":"fsponton",
-    "email":"f@gmail.com",
+    "name":"seba",
+    "email":" seba@gmail.com ",
     "password":"123456",
     "gender":"Male"
 }
@@ -15,7 +15,7 @@ POST http://localhost:8000/User/login
 Content-Type: application/json
 
 {
-    "email":" f@gmail.com  ",
+    "email":" seba@gmail.com  ",
     "password":"123456"
 }
 

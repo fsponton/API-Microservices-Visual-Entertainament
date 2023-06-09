@@ -1,33 +1,33 @@
 class modelError extends Error {
-    constructor(message, statusCode = 400) {
+    constructor(message, code = 404) {
         super(message);
         this.name = 'modelError'
-        this.statusCode = statusCode;
+        this.code = code;
     }
 }
 
 
 class tokenError extends Error {
-    constructor(message, statusCode = 401) {
+    constructor(message, code = 401) {
         super(message);
         this.name = 'tokenError'
-        this.statusCode = statusCode;
+        this.code = code;
     }
 }
 
 class userError extends Error {
-    constructor(message, statusCode = 401) {
+    constructor(message, code = 401) {
         super(message);
         this.name = 'userError'
-        this.statusCode = statusCode;
+        this.code = code;
     }
 }
 
 class objectError extends Error {
-    constructor(message, statusCode = 401) {
+    constructor(message, code = 401) {
         super(message);
         this.name = 'objectError'
-        this.statusCode = statusCode;
+        this.code = code;
     }
 }
 

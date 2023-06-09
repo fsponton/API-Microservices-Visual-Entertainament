@@ -22,8 +22,6 @@ router.post("/:model",
     middleware.verifyExistence,
     controller.createObject)
 
-
-
 // GET SORTED LIST, polimorfic, for any entity.  /sort?prop=release&shape=-1
 router.get("/:model/sort/",
     middleware.validateModel,
@@ -41,7 +39,6 @@ router.get("/:model/:id",
     middleware.validateModel,
     middleware.verifyUser,
     controller.getById)
-
 
 module.exports = router;
 

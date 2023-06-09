@@ -1,14 +1,14 @@
 ### CREATE A NEW MOVIE
 POST http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b24iLCJlbWFpbCI6ImZAZ21haWwuY29tIiwiaWF0IjoxNjg2MjU3NjQ4LCJleHAiOjE2ODYyNTg4NDh9.rgMMsUcctOyCB5oWWX8-ipRJdxMRAffrJcDh_Rc9U84
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2ViYSIsImVtYWlsIjoic2ViYUBnbWFpbC5jb20iLCJpYXQiOjE2ODYyNjUxOTYsImV4cCI6MTY4NjI2NjM5Nn0.tPXUAububjr3iFbn1-u7CQOHXzWuNq4n2MbaqkzXDOs
 
 {
-    "title":"pokemon demonic stephen kiiing",
+    "title":"pokemon and sebuchi demonic stephen kiiing",
     "release":"2015",
     "language":"Eng",
     "genres":["Thriller","Suspence"],
-    "id_actors":["6482400d45ff9d64b0554c89"],
+    "id_actors":["6482400d45ff9d64b0554c89","64825d90d3ce525a6cdd4399"],
     "id_director": "6482407c45ff9d64b0554c91"
 }
 
@@ -17,7 +17,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b
 ### GET LIST OF MOVIES
 GET http://localhost:8000/Movie
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0N2VhNDZmNjJhOGFiMjUzOGEwYjQ4ZCIsIm5hbWUiOiJmc3R0dGRkcyIsImVtYWlsIjoiZkBnbWFpbC5jb20iLCJpYXQiOjE2ODYwNjA5ODAsImV4cCI6MTY4NjA2NDU4MH0.1b2QPliKP6p3R86qI3rDXTDonuatsQyG6MZcDD5ENMM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2ViYSIsImVtYWlsIjoic2ViYUBnbWFpbC5jb20iLCJpYXQiOjE2ODYyNjUxOTYsImV4cCI6MTY4NjI2NjM5Nn0.tPXUAububjr3iFbn1-u7CQOHXzWuNq4n2MbaqkzXDOs
 
 
 

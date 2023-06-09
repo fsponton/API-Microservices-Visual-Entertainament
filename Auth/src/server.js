@@ -14,7 +14,6 @@ server.use("*", (req, res) => {
 
 
 server.use((err, req, res, next) => {
-
     //validation form error (register/login)
     if (err.name === "validationError") {
         return res.status(err.status).send({
@@ -22,6 +21,8 @@ server.use((err, req, res, next) => {
             message: err.message
         })
     }
+
+    console.log(err)
 
     //error responses from db
     return res.status(err.response.status || 500).send({

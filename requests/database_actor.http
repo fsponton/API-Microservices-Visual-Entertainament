@@ -1,15 +1,16 @@
 ### CREATE A NEW ACTOR
-POST http://localhost:8000/Actor
+POST http://localhost:8000/Actorr
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b24iLCJlbWFpbCI6ImZAZ21haWwuY29tIiwiaWF0IjoxNjg2MjU3NjQ4LCJleHAiOjE2ODYyNTg4NDh9.rgMMsUcctOyCB5oWWX8-ipRJdxMRAffrJcDh_Rc9U84
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2ViYSIsImVtYWlsIjoic2ViYUBnbWFpbC5jb20iLCJpYXQiOjE2ODYyNjUxOTYsImV4cCI6MTY4NjI2NjM5Nn0.tPXUAububjr3iFbn1-u7CQOHXzWuNq4n2MbaqkzXDOs
 
-{    "name":"",
+{    
+    "name":"Sebuchi",
     "gender":"Male",
     "birth_year":"1927" 
 }
 
 ### GET LIST ACTORS
-GET http://localhost:8000/Actor
+GET http://localhost:8000/ss
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZnNwb250b24iLCJlbWFpbCI6ImZAZ21haWwuY29tIiwiaWF0IjoxNjg2MjU3NjQ4LCJleHAiOjE2ODYyNTg4NDh9.rgMMsUcctOyCB5oWWX8-ipRJdxMRAffrJcDh_Rc9U84
 

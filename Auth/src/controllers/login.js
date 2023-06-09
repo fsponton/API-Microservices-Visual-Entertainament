@@ -1,9 +1,12 @@
 const User = require("../config/DDBB")
-const { response } = require("../utils")
 
 module.exports = async (req, res) => {
     const form = req.body
     const result = await User.login(form)
     const login = await result.data
-    response(res, 201, login)
+
+    res.status(200)
+        .header({ token: result.headers.token })
+        .json({ error: "false", message: `User ${login.message} is logged` })
+
 }

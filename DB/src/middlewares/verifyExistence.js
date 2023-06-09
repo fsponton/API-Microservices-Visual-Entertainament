@@ -20,5 +20,5 @@ module.exports = async (req, res, next) => {
 
     req.body[prop] = value
 
-    next()
+    return next()
 }

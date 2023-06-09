@@ -1,4 +1,4 @@
-module.exports = (res, statusCode, data) => {
-    res.status(statusCode).json({ data })
+module.exports = (res, code, data) => {
+    res.status(code).json({ data })
 }
 

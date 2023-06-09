@@ -11,8 +11,9 @@ server.use(express.json());
 server.use(require("./routes"))
 
 //Error - route invalid
-server.use("*", (req, res) => {
-    throw new modelError(`Invalid route, please check`, 404)
+//for log
+server.use("*", () => {
+    throw new modelError(`Invalid route, please checkkk`, 404)
 })
 
 
@@ -36,7 +37,7 @@ server.use((err, req, res, next) => {
     }
 
     //Error - others
-    return res.status(err.status || 500).send({
+    return res.status(err.code || 500).send({
         error: true,
         errorName: err.name,
         message: err.message

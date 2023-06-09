@@ -10,7 +10,6 @@ module.exports = async (req, res, next) => {
         Director: () => validateDirector('director'),
         Movie: validateMovie({ form }),
         TvShow: () => validateTvShow('tvshow')
-
     }
 
     await checkObjectToCreate[model]
