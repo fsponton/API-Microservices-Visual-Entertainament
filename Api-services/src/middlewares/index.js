@@ -1,3 +1,5 @@
 module.exports = {
-    formValidator: require("../../../Api-services/src/middlewares/formValidator")
+    formValidator: require("./formValidator"),
+    verifyToken: require("./verifyToken"),
+    validateModel: require("./validateModel")
 }

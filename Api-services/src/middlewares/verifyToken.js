@@ -13,10 +13,11 @@ module.exports = (req, res, next) => {
         throw new tokenError('Invalid authorization', 401)
     }
 
-
     const decodedToken = jwt.verify(token, `${PASSWORD_SIGN}`)
 
     if (!token || !decodedToken) { throw new tokenError('Token missing or invalid', 401) }
+
+    req.token = token
 
     next()
 }

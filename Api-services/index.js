@@ -3,5 +3,5 @@ const env = require("./src/config/enviroments")
 
 
 server.listen(env.PORT, () => {
-    console.log(`Server AUTH listening on port ${env.PORT}`);
+    console.log(`Server Api-services listening on port ${env.PORT}`);
 });

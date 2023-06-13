@@ -4,8 +4,6 @@ module.exports = ({ form }) => {
     //     if (!form[prop]) throw new ClientError(`Falta el valor de ${prop}`, 401)
     // }
 
-
-
     const props = []
     for (let prop in form) {
         console.log(prop)

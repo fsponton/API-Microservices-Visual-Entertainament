@@ -7,6 +7,6 @@ module.exports = async (req, res) => {
 
     res.status(200)
         .header({ token: result.headers.token })
-        .json({ error: "false", message: `User ${login.message} is logged` })
+        .json({ error: `${login.error}`, message: ` ${login.message}` })
 
 }

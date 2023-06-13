@@ -5,6 +5,8 @@ module.exports = async (req, res, next) => {
     const { model } = req.params
     const form = req.body
 
+
+    console.log("tukiii")
     const checkObjectToCreate = {
         Actor: () => validateActor(form),
         Director: () => validateDirector('director'),

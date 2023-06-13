@@ -1,3 +1,4 @@
 module.exports = {
-    validationKeys: require("./checkKeys")
+    validationKeys: require("./checkKeys"),
+    stringToArray: require("./stringToArray")
 }
