@@ -1,32 +1,38 @@
-const { checkKeys, checkNulls } = require("../helpers")
+const { getKeys, checkNulls } = require("../helpers")
+const { clientError } = require("../utils/errors")
 
 //Middlware - Check existence an object in model
-module.exports = async (req, res, next) => {
+module.exports = (req, res, next) => {
     const { model } = req.params
     const form = req.body
 
-    const keys = checkKeys(model)
 
-
+    const keys = getKeys(model)
     const formkeys = Object.keys(form)
 
-    if (keys.length === formkeys.length) {
-        for (let i = 0; i < formkeys.length; i++) {
-            if (!(keys.includes(formkeys[i]))) res.status(400).send({ error: "true", message: "error on key " })
-        }
-    } else {
-        return res.status(400).send({ error: "true", message: "missing key on form" })
+    const stringKeys = keys.join(", ")
+
+    if (keys.length !== formkeys.length) { throw new clientError(`Missing a key on form, check valid keys: ${stringKeys}`, 400) }
+
+
+    for (let i = 0; i < formkeys.length; i++) {
+        if (!(keys.includes(formkeys[i]))) { throw new clientError(`Error on form, check valid keys: ${stringKeys}`, 400) }
+        // res.status(400).send({ error: "true", message: `Error on form, check valid keys: ${stringKeys}` })
     }
+
+
+    // res.status(400).send({ error: "true", message: `Missing a key on form, check valid keys: ${stringKeys}` })
+
 
 
     const checkObjectToCreate = {
-        Actor: () => validateActor(form),
-        Director: () => validateDirector('director'),
+        Actor: checkNulls(form),
+        Director: checkNulls(form),
         Movie: checkNulls(form),
-        TvShow: () => validateTvShow('tvshow')
+        TvShow: checkNulls(form)
     }
 
-    await checkObjectToCreate[model]
+    checkObjectToCreate[model]
 
     req.form
     req.token

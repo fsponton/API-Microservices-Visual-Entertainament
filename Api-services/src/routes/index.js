@@ -12,26 +12,26 @@ router.post("/:model/create",
     controller.createObject
 )
 
-//GET List of objects
+//GET List of Bbjects
 router.get("/:model",
     middleware.verifyToken,
     middleware.validateModel,
     controller.getList
 )
 
-//GET SORTED LIST BY PROP and asc/desc (-1 - 1)    /sort?prop=release&shape=-1   
+//GET Sorted list by any prop and asc or desc    /sort?prop=release&shape=-1 (value options: -1 || - 1) 
 router.get("/:model/sort",
     middleware.verifyToken,
-    middleware.validateModel
+    middleware.validateModel,
+    controller.getSortedList
 )
 
 //GET Object by id
 router.get("/:model/:id",
     middleware.verifyToken,
-    middleware.validateModel
+    middleware.validateModel,
+    controller.getById
 )
-
-
 
 module.exports = router;
 

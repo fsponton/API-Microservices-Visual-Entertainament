@@ -1,5 +1,5 @@
 module.exports = {
-    checkKeys: require("./checkKeys"),
+    getKeys: require("./getKeys"),
     stringToArray: require("./stringToArray"),
     checkNulls: require("./checkNulls")
 }

@@ -1,6 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
-const { modelError } = require("./utils/errors");
+const { modelError, formError } = require("./utils/errors");
 
 
 const server = express();
@@ -16,8 +16,6 @@ server.use("*", (req, res) => {
 
 
 server.use((err, req, res, next) => {
-    console.log(err)
-
     //Error - expired token
     if (err.name === "TokenExpiredError" || err.name === "JsonWebTokenError") {
         return res.status(401).send({
@@ -27,10 +25,16 @@ server.use((err, req, res, next) => {
         })
     }
 
+    if (err.name === "clientError") {
+        return res.status(401).send({
+            error: true,
+            errorName: err.name,
+            message: err.message
+        })
+    }
 
 
-
-    //Error responses from db
+    //Errors - responses from db
     return res.status(err.response.status || 500).send({
         error: true,
         errorName: err.response.data.name,

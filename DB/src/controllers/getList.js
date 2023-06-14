@@ -3,7 +3,6 @@ const { response } = require("../utils")
 
 module.exports = async (req, res) => {
     const { model } = req.params
-    console.log("entro")
     const result = await store[model].list()
     response(res, 200, result)
 }

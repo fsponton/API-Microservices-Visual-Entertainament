@@ -19,5 +19,6 @@ module.exports = (req, res, next) => {
 
     req.token = token
 
-    next()
+
+    return next()
 }
