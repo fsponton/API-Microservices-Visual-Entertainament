@@ -7,6 +7,16 @@ class modelError extends Error {
 }
 
 
+
+class clientError extends Error {
+    constructor(message, code = 400) {
+        super(message);
+        this.name = 'clientError'
+        this.code = code;
+    }
+}
+
+
 class tokenError extends Error {
     constructor(message, code = 401) {
         super(message);
@@ -17,4 +27,4 @@ class tokenError extends Error {
 
 
 
-module.exports = { modelError, tokenError };
+module.exports = { modelError, tokenError, clientError };

@@ -4,7 +4,7 @@ module.exports = {
     create: async (form) => {
         return await axios({
             method: "post",
-            url: `http://localhost:8000/${model}`,
+            url: `http://localhost:8000/${model}/create`,
             headers: { Authorization: `Bearer ${token}` },
             data: form,
         })

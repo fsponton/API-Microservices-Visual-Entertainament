@@ -1,6 +1,7 @@
 const { catchedAsync } = require("../utils")
 
 module.exports = {
-    validateMovie: require("../../../Api-services/src/controllers/validateMovie"),
-    getList: catchedAsync(require("./getList"))
+    validateMovie: require("../helpers/checkNulls"),
+    getList: catchedAsync(require("./getList")),
+    createObject: catchedAsync(require("./createObject"))
 }

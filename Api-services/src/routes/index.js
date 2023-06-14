@@ -8,7 +8,8 @@ const middleware = require("../middlewares")
 router.post("/:model/create",
     middleware.verifyToken,
     middleware.validateModel,
-    middleware.formValidator
+    middleware.formValidator,
+    controller.createObject
 )
 
 //GET List of objects

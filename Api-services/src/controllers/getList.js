@@ -1,4 +1,3 @@
-
 const store = require("../config/DDBB/index")
 const { response } = require("../utils")
 
