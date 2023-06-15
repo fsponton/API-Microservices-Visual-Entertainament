@@ -15,14 +15,7 @@ module.exports = async (req, res, next) => {
         : await bcrypt.compare(password, user.password)
     if (!(user && encryptedPassword)) { throw new userError('Invalid email or password', 401) }
 
-
     req.user = user
 
     return next()
-
-
-
-
-
-
 }

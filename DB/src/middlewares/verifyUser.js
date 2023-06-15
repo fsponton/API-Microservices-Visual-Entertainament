@@ -9,14 +9,11 @@ module.exports = (req, res, next) => {
 
     if (authorization && authorization.toLowerCase().startsWith('bearer')) {
         token = authorization.substring(7)
-    } else {
-        throw new tokenError('Invalid authorization', 401)
-    }
-
+    } else { throw new tokenError('Invalid authorization', 401) }
 
     const decodedToken = jwt.verify(token, `${PASSWORD_SIGN}`)
 
     if (!token || !decodedToken) { throw new tokenError('Token missing or invalid', 401) }
 
-    next()
+    return next()
 }

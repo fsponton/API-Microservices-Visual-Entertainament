@@ -1,11 +1,13 @@
 const store = require("../config/DDBB/index")
-const { checkAndModifyName } = require("../helpers")
+const { checkAndModifyName, firstUpper } = require("../helpers")
 const { objectError, userError } = require("../utils/errors")
 
 //Middlware - Check existence an object in model
 module.exports = async (req, res, next) => {
-    const { model } = req.params
+    let { model } = req.params
     const { title, name } = req.body
+
+    model = firstUpper(model)
 
     if (!(title || name)) { throw new userError('Check name or title', 400) }
 
@@ -22,6 +24,6 @@ module.exports = async (req, res, next) => {
     }
 
     req.body[prop] = value
-
+    req.model = model
     return next()
 }

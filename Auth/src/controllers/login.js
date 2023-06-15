@@ -8,5 +8,4 @@ module.exports = async (req, res) => {
     res.status(200)
         .header({ token: result.headers.token })
         .json({ error: `${login.error}`, message: ` ${login.message}` })
-
 }

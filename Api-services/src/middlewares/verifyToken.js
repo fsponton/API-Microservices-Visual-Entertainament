@@ -19,6 +19,5 @@ module.exports = (req, res, next) => {
 
     req.token = token
 
-
     return next()
 }

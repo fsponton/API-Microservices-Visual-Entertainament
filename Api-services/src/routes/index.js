@@ -23,6 +23,7 @@ router.get("/:model",
 router.get("/:model/sort",
     middleware.verifyToken,
     middleware.validateModel,
+    middleware.propValidator,
     controller.getSortedList
 )
 

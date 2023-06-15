@@ -1,5 +1,6 @@
 module.exports = {
     stringToArray: require("./stringToArray"),
     checkAndModifyName: require("./checkAndModifyName"),
-    validateMovie: require("../../../Api-services/src/helpers/checkNulls")
+    validateMovie: require("../../../Api-services/src/helpers/checkNulls"),
+    firstUpper: require("./firstUpper")
 }

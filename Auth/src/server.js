@@ -15,15 +15,26 @@ server.use("*", (req, res) => {
 
 
 server.use((err, req, res, next) => {
-    //validation form error (register/login)
+
+    //Error in form validation (register/login)
     if (err.name === "validationError") {
         return res.status(err.status).send({
             error: true,
+            errorName: err.name,
             message: err.message
         })
     }
 
-    //error responses from db
+    //Error's in routes
+    if (err.name === "modelError") {
+        return res.status(err.code).send({
+            error: true,
+            errName: err.name,
+            message: err.message
+        })
+    }
+
+    //Error - response's from db (existence object, bad email or bad password)
     return res.status(err.response.status || 500).send({
         error: true,
         errorName: err.response.data.name,

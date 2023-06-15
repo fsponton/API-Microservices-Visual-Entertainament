@@ -1,10 +1,10 @@
 const mongoose = require("mongoose")
 const store = require("../config/DDBB/index")
-const { Actor, Movie, TvShow, Director } = require("../config/DDBB/index")
+const { Actor, Movie, Tvshow, Director } = require("../config/DDBB/index")
 const { response } = require("../utils")
 
 module.exports = async (req, res) => {
-    const { model } = req.params
+    const model = req.model
     const form = req.body
 
     const _id = new mongoose.Types.ObjectId;
@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
         await Director.addMovie(id_director, idMovie)
     }
 
-    if (result instanceof TvShow) {
+    if (result instanceof Tvshow) {
         const id_actors = form.id_actors
         const id_director = form.id_director
         const idTvShow = result._id

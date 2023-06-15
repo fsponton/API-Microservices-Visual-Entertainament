@@ -19,14 +19,14 @@ module.exports = {
     getById: async (token, model, id) => {
         return await axios({
             method: "get",
-            url: `http://localhost:8000/${model}/:${id}`,
+            url: `http://localhost:8000/${model}/${id}`,
             headers: { Authorization: `Bearer ${token}` }
         })
     },
     sortedList: async (token, model, prop, shape) => {
         return await axios({
             method: "get",
-            url: `http://localhost:8000/${model}?prop=${prop}&shape=${shape}}`,
+            url: `http://localhost:8000/${model}/sort?prop=${prop}&shape=${shape}`,
             headers: { Authorization: `Bearer ${token}` }
         })
     }

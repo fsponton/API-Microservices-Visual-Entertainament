@@ -14,7 +14,6 @@ module.exports = async (req, res, next) => {
 
     if (user) { throw new userError(`User with ${email} already exist's`, 400) }
 
-
     req.form = {
         name,
         email: emailLower,

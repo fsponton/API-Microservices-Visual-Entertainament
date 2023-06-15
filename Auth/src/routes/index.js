@@ -3,8 +3,8 @@ const router = Router();
 const controller = require("../controllers")
 const middleware = require("../middlewares")
 
-router.post("/User/register", middleware.formValidation, controller.register)
+router.post("/user/register", middleware.formValidation, controller.register)
 
-router.post("/User/login", middleware.formValidation, controller.login)
+router.post("/user/login", middleware.loginValidation, controller.login)
 
 module.exports = router;

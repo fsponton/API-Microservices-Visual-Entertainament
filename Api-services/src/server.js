@@ -25,14 +25,13 @@ server.use((err, req, res, next) => {
         })
     }
 
-    if (err.name === "clientError") {
+    if (err.name === "clientError" || err.name === "modelError") {
         return res.status(401).send({
             error: true,
             errorName: err.name,
             message: err.message
         })
     }
-
 
     //Errors - responses from db
     return res.status(err.response.status || 500).send({

@@ -1,9 +1,8 @@
 const { clientError } = require("../utils/errors")
-module.exports = (form) => {
 
+module.exports = (form) => {
     const props = []
     for (let prop in form) {
-
         if (form[prop] === null || form[prop].length === 0) props.push(prop)
     }
 
