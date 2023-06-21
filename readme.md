@@ -92,27 +92,30 @@ Authorization: bearer token_logged
 ```
 
 
-### GET List of any entity 
+## GET List of any entity 
 ### http://localhost:999/actor/ 
 ### http://localhost:999/director/ 
 ### http://localhost:999/movie/ 
 ### http://localhost:999/tvshow/
 
 ### For Example
+```
 GET http://localhost:999/actor/
 Content-Type: application/json
 Authorization: bearer token_logged
+```
 
-
-### GET Sorted list by any PROP - ASC OR DESC 
+## GET Sorted list by any PROP - ASC OR DESC 
+```
 GET http://localhost:999/actor/sort?prop=birth_year&shape=-1
 Content-Type: application/json
 Authorization: bearer token_logged
+```
 
-
-### GET object of any entity by id
+## GET object of any entity by id
+```
 GET http://localhost:999/actor/647f768c98386d0a0056f62
 Content-Type: application/json
 Authorization: bearer token_logged
-
+```
 
