@@ -11,20 +11,20 @@ services:
   api-services:
     container_name: api-services
     restart: always
-    build: ./Api-services
+    build: ./api-services
     ports:
       - "8002:8002"
 
   auth:
     container_name: auth
     restart: always
-    build: ./Auth
+    build: ./auth
     ports:
       - "8001:8001"
 
   database:
     container_name: database
     restart: always
-    build: ./DB
+    build: ./database
     ports:
       - "8000:8000"
