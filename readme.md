@@ -13,7 +13,8 @@ Content-Type: application/json
 }
 ```
 
-### Login User - Return token for others requests.
+### Login User - Return token for others requests
+```
 POST http://localhost:999/user/login
 Content-Type: application/json
 
@@ -21,7 +22,7 @@ Content-Type: application/json
     "email":"fransponton@gmail.com",
     "password":"123456"
 }
-
+```
 
 ## You need first create an actor and director after that, create an movie or tv show.
 
@@ -34,6 +35,7 @@ Content-Type: application/json
 
 
 ### Create an Actor
+```
 POST  http://localhost:999/actor/create
 Content-Type: application/json
 Authorization: bearer token_logged
@@ -43,8 +45,9 @@ Authorization: bearer token_logged
     "birth_year":"1974",
     "gender":"Male"
 }
-
+```
 ### Create an Director
+```
 POST  http://localhost:999/director/create
 Content-Type: application/json
 Authorization: bearer token_logged
@@ -53,10 +56,11 @@ Authorization: bearer token_logged
     "name":"Christopher Nolan",
     "birth_year":"1970"
 }
-
+```
 
 
 #### Create a movie with id of any actors and id director
+```
 POST  http://localhost:999/movie/create
 Content-Type: application/json
 Authorization: bearer token_logged
@@ -69,9 +73,10 @@ Authorization: bearer token_logged
     "id_actors":["id_of_Leonardo_Di_Caprio","another_id_of_any_actor"],
     "id_director": "id_of_Christopher_Nolan"
 }
-
+```
 
 #### Create a tv show with id of any actors and id director
+```
 POST  http://localhost:999/tvshow/create
 Content-Type: application/json
 Authorization: bearer token_logged
@@ -84,7 +89,7 @@ Authorization: bearer token_logged
     "id_actors":["id_of_any_actor_before_created","another_id_of_any_actor_before_created"],
     "id_director": "id_of_David_Crame_before_created"
 }
-
+```
 
 
 ### GET List of any entity 
