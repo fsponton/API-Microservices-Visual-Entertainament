@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const app = express();
 
-app.use('/User/*', createProxyMiddleware({
+app.use('/user/*', createProxyMiddleware({
     target: "http://auth:8001",
     changeOrigin: true
 }));
