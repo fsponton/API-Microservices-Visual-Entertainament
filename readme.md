@@ -1,4 +1,4 @@
-## For use all functionalities of challenge_microservices_visual_entertainament, you need register and login.
+# For use all functionalities of challenge_microservices_visual_entertainament, you need register and login.
 
 ### Register User
 POST http://localhost:999/user/register
@@ -23,7 +23,6 @@ Content-Type: application/json
 
 
 ## You need first create an actor and director after that, create an movie or tv show.
-
 
 ### POST - create object of any entity, it's polimorfic
 
