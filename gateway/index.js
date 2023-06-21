@@ -13,6 +13,6 @@ app.use("/", createProxyMiddleware({
     changeOrigin: true
 }));
 
-app.listen(999, () => {
-    console.log(`Gateway  Visual Entertainment listening on port 999`)
+app.listen(8000, () => {
+    console.log(`Gateway  Visual Entertainment listening on port 8000`)
 })
