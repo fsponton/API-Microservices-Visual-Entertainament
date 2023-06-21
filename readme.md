@@ -29,9 +29,9 @@ Content-Type: application/json
 ### POST - create object of any entity, it's polimorfic
 
 ### Erros catched:
-*1- missing prop on form, return info with props required   (For example: when create a movie o tv show without title or an actor o dicrector without name)
-*2- missing value on prop in form (For example: when create an object of any entity with value null or "")
-*3- error prop of any entity (For example: when you try create an actor or director with prop "nameee" )
+* 1- missing prop on form, return info with props required   (For example: when create a movie o tv show without title or an actor o dicrector without name)
+* 2- missing value on prop in form (For example: when create an object of any entity with value null or "")
+* 3- error prop of any entity (For example: when you try create an actor or director with prop "nameee" )
 
 
 ### Create an Actor
