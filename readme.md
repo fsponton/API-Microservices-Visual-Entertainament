@@ -1,6 +1,7 @@
 # For use all functionalities of challenge_microservices_visual_entertainament, you need register and login.
 
 ### Register User
+```
 POST http://localhost:999/user/register
 Content-Type: application/json
 
@@ -10,7 +11,7 @@ Content-Type: application/json
     "password":"123456",
     "gender":"Male"
 }
-
+```
 
 ### Login User - Return token for others requests.
 POST http://localhost:999/user/login
