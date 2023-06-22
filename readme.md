@@ -91,7 +91,7 @@ Authorization: bearer token_logged
 }
 ```
 
-## GETTER'S
+## GETTERS
 
 ### GET List of any entity 
 ### http://34.125.242.171:8000/ ```actor``` or ```movie``` or ```director``` or ```tvshow```
