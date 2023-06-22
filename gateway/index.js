@@ -4,12 +4,12 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 const app = express();
 
 app.use('/user/*', createProxyMiddleware({
-    target: "http://localhost:8001",
+    target: "http://auth:8001",
     changeOrigin: true
 }));
 
 app.use("/", createProxyMiddleware({
-    target: "http://localhost:8002",
+    target: "http://api-services:8002",
     changeOrigin: true
 }));
 
