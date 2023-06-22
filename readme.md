@@ -1,4 +1,4 @@
-# For use all functionalities of challenge_microservices_visual_entertainament, you need register and login.
+# For use all functionalities of challenge_microservices_visual_entertainament, you need to register and login.
 
 ### Register User
 ```
