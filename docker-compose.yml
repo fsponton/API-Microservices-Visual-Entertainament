@@ -6,7 +6,7 @@ services:
     restart: always
     build: ./gateway
     ports:
-      - "999:999"
+      - "8000:8000"
 
   api-services:
     container_name: api-services
@@ -27,4 +27,4 @@ services:
     restart: always
     build: ./database
     ports:
-      - "8000:8000"
+      - "8010:8010"
