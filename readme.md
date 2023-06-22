@@ -2,7 +2,7 @@
 
 ### Register User
 ```
-POST http://localhost:999/user/register
+POST http://34.125.242.171:8000/user/register
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 
 ### Login User - Return token for others requests
 ```
-POST http://localhost:999/user/login
+POST http://34.125.242.171:8000/user/login
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 
 ### Create an Actor
 ```
-POST  http://localhost:999/actor/create
+POST  http://34.125.242.171:8000/actor/create
 Content-Type: application/json
 Authorization: bearer token_logged
 
@@ -48,7 +48,7 @@ Authorization: bearer token_logged
 ```
 ### Create an Director
 ```
-POST  http://localhost:999/director/create
+POST  http://34.125.242.171:8000/director/create
 Content-Type: application/json
 Authorization: bearer token_logged
 
@@ -61,7 +61,7 @@ Authorization: bearer token_logged
 
 #### Create a movie with id of any actors and id director
 ```
-POST  http://localhost:999/movie/create
+POST  http://34.125.242.171:8000/movie/create
 Content-Type: application/json
 Authorization: bearer token_logged
 
@@ -77,7 +77,7 @@ Authorization: bearer token_logged
 
 #### Create a tv show with id of any actors and id director
 ```
-POST  http://localhost:999/tvshow/create
+POST  http://34.125.242.171:8000/tvshow/create
 Content-Type: application/json
 Authorization: bearer token_logged
 {
@@ -94,14 +94,11 @@ Authorization: bearer token_logged
 ## GETTER'S
 
 ### GET List of any entity 
-### http://localhost:999/actor/ 
-### http://localhost:999/director/ 
-### http://localhost:999/movie/ 
-### http://localhost:999/tvshow/
+### http://34.125.242.171:8000/```actor``` or ```movie``` or ```director``` or ```tvshow```
 
 ### For Example
 ```
-GET http://localhost:999/actor/
+GET http://34.125.242.171:8000/actor/
 Content-Type: application/json
 Authorization: bearer token_logged
 ```
@@ -109,14 +106,14 @@ Authorization: bearer token_logged
 ### For Example
 ### GET Sorted list by any PROP - ASC OR DESC 
 ```
-GET http://localhost:999/actor/sort?prop=birth_year&shape=-1
+GET http://34.125.242.171:8000/actor/sort?prop=birth_year&shape=-1
 Content-Type: application/json
 Authorization: bearer token_logged
 ```
 ### For Example
 ### GET object of any entity by id
 ```
-GET http://localhost:999/actor/647f768c98386d0a0056f62
+GET http://34.125.242.171:8000/actor/647f768c98386d0a0056f62
 Content-Type: application/json
 Authorization: bearer token_logged
 ```
