@@ -103,8 +103,9 @@ Content-Type: application/json
 Authorization: bearer token_logged
 ```
 
-### For Example
 ### GET Sorted list by any PROP - ASC OR DESC 
+
+### For Example
 ```
 GET http://34.125.242.171:8000/actor/sort?prop=birth_year&shape=-1
 Content-Type: application/json
