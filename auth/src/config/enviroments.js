@@ -1,5 +1,5 @@
 require("dotenv").config({ path: "././.env" })
 
 module.exports = {
-    PORT: 8001
+    PORT: process.env.PORT
 }   
