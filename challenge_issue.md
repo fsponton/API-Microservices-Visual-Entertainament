@@ -1,29 +1,30 @@
-Development Challenge for Node.js
+## Development Challenge for Node.js
 This challenge aims to evaluate basic skills in Node.js development, and a bit of data/entity modeling. The idea is to build an HTTP REST API.
 
-Functionality
+## Functionality
 The API has to fulfill the following conditions:
 
-Endpoints for authentication using JWT.
-Include an endpoint for refreshing the JWT access token.
-Endpoint for retrieving movies.
-It should be allowed to filter and sort by some field.
-Endpoint for retrieving the information (director included) of a specific episode of a TV Show
-Endpoint for adding a new object (it could be for any entity you like).
+*  Endpoints for authentication using JWT.
+*  Include an endpoint for refreshing the JWT access token.
+*  Endpoint for retrieving movies.
+*  It should be allowed to filter and sort by some field.
+*  Endpoint for retrieving the information (director included) of a specific episode of a TV Show
+*  Endpoint for adding a new object (it could be for any entity you like).
+
 Model
 Entities to consider:
 
-Movie
+*  Movie
 Has many actors, but one director.
-TV Show
+*  TV Show
 Has many actors. It also has seasons and episodes inside each of one.
-Actor
+*  Actor
 Can be on different movies and tv shows.
-Director
+*  Director
 Can direct many movies and specific episodes of tv shows.
 Use your common sense (or imagination 😉) to define the descriptive attributes/properties of each entity. For example, name or genre.
 
-Tech Requirements
+### Tech Requirements
 These are the following conditions for the development:
 
 The code should be using Node.js 16 or superior.
