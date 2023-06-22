@@ -27,15 +27,15 @@ Use your common sense (or imagination 😉) to define the descriptive attributes
 ### Tech Requirements
 These are the following conditions for the development:
 
-The code should be using Node.js 16 or superior.
-The code could be written in Javascript or Typescript.
-All the code and comments should be written in english.
-Use a proper naming conventions and standards when defining the structure of the project and the name of variables, functions, etc.
-Use a proper structure to define the different path for the API endpoints
-The use of ESLint or other linter is optional.
-The database could be relational or NoSQL, it's up to you. The use of ORM is optional too.
-The database doesn't need to be presented. But the model should be represented in some way. It could be in the form of ORM configuration or at least a minimal documentation or example of some of the entities.
-Presentation
+*  The code should be using Node.js 16 or superior.
+*  The code could be written in Javascript or Typescript.
+*  All the code and comments should be written in english.
+*  Use a proper naming conventions and standards when defining the structure of the project and the name of variables, functions, etc.
+*  Use a proper structure to define the different path for the API endpoints
+*  The use of ESLint or other linter is optional.
+*  The database could be relational or NoSQL, it's up to you. The use of ORM is optional too.
+*  The database doesn't need to be presented. But the model should be represented in some way. It could be in the form of ORM configuration or at least a minimal documentation or example of some of the entities.
+## Presentation
 The result of this challenge should be presented as a GitHub or GitLab private repository, giving access to the person that contacted you.
 Please add some minimal documentation (in the form of a README file) describing how to run the project and if there is any requirement or consideration to do so.
 
