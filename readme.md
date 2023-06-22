@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
     "name":"Francisco Sponton",
-      "email":"fransponton@gmail.com",
+    "email":"fransponton@gmail.com",
     "password":"123456",
     "gender":"Male"
 }
@@ -94,7 +94,7 @@ Authorization: bearer token_logged
 ## GETTER'S
 
 ### GET List of any entity 
-### http://34.125.242.171:8000/```actor``` or ```movie``` or ```director``` or ```tvshow```
+### http://34.125.242.171:8000/ ```actor``` or ```movie``` or ```director``` or ```tvshow```
 
 ### For Example
 ```
