@@ -35,10 +35,4 @@ These are the following conditions for the development:
 *  The use of ESLint or other linter is optional.
 *  The database could be relational or NoSQL, it's up to you. The use of ORM is optional too.
 *  The database doesn't need to be presented. But the model should be represented in some way. It could be in the form of ORM configuration or at least a minimal documentation or example of some of the entities.
-## Presentation
-The result of this challenge should be presented as a GitHub or GitLab private repository, giving access to the person that contacted you.
-Please add some minimal documentation (in the form of a README file) describing how to run the project and if there is any requirement or consideration to do so.
 
-Oh, and please don't link or fork this repo to create your own. That way other people trying to complete this challenge won't be able to see solutions to it 😆.
-
-Let's code 💻!
